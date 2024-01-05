@@ -1,0 +1,71 @@
+name: ragground
+
+services:
+  postgres:
+    image: pgvector/pgvector:0.8.3-pg18
+    environment:
+      POSTGRES_USER: ragground
+      POSTGRES_PASSWORD: ragground
+      POSTGRES_DB: ragground
+    ports: ["5442:5432"]
+    volumes: [pgdata:/var/lib/postgresql]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ragground"]
+      interval: 5s
+      retries: 10
+
+  redis:
+    image: redis:7.4-alpine
+    ports: ["6389:6379"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      retries: 10
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.62.0
+    ports:
+      - "16686:16686" # UI
+      - "4317:4317"   # OTLP gRPC
+      - "4318:4318"   # OTLP HTTP
+
+  api:
+    build: ./api
+    env_file:
+      - path: ./api/.env
+        required: false
+    environment:
+      RAGGROUND_DATABASE_URL: postgresql+asyncpg://ragground:ragground@postgres:5432/ragground
+      RAGGROUND_REDIS_URL: redis://redis:6379/0
+      # Ollama runs on the host machine, not in compose.
+      RAGGROUND_OLLAMA_BASE_URL: http://host.docker.internal:11434
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    ports: ["8000:8000"]
+    volumes: [appdata:/app/data]
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis: { condition: service_healthy }
+
+  worker:
+    build: ./api
+    command: ["arq", "ragground.worker.WorkerSettings"]
+    env_file:
+      - path: ./api/.env
+        required: false
+    environment:
+      RAGGROUND_DATABASE_URL: postgresql+asyncpg://ragground:ragground@postgres:5432/ragground
+      RAGGROUND_REDIS_URL: redis://redis:6379/0
+    volumes: [appdata:/app/data] # uploaded blobs shared with the API, plus the embedding model cache
+    depends_on:
+      api: { condition: service_started } # the API runs migrations on start
+
+  web:
+    build: ./web
+    environment:
+      RAGGROUND_API_URL: http://api:8000
+    ports: ["3000:3000"]
+    depends_on: [api]
+
+volumes:
+  pgdata:
+  appdata:
