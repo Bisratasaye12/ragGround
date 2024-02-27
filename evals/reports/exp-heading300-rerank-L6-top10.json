@@ -1,0 +1,1977 @@
+{
+  "created_at": "2026-11-07T15:32:43.389489+00:00",
+  "git_sha": null,
+  "kind": "retrieval",
+  "config": {
+    "chunker": "heading",
+    "max_size": 300,
+    "size_unit": "words",
+    "embedding": "BAAI/bge-small-en-v1.5",
+    "reranker": "Xenova/ms-marco-MiniLM-L-6-v2",
+    "rerank_top_n": 10,
+    "rerank_max_words": null,
+    "fulltext_operator": "or",
+    "chunks": 489
+  },
+  "retrieval": [
+    {
+      "mode": "hybrid_rerank",
+      "summary": {
+        "overall": {
+          "hit_at_1": 0.7629,
+          "hit_at_5": 0.9278,
+          "recall_at_5": 0.9072,
+          "recall_at_10": 0.9227,
+          "mrr": 0.8388,
+          "ndcg_at_10": 0.8541,
+          "n": 97
+        },
+        "by_category": {
+          "factual": {
+            "hit_at_1": 0.8133,
+            "hit_at_5": 0.92,
+            "recall_at_5": 0.92,
+            "recall_at_10": 0.9333,
+            "mrr": 0.8649,
+            "ndcg_at_10": 0.8821,
+            "n": 75
+          },
+          "factual_restricted": {
+            "hit_at_1": 0.75,
+            "hit_at_5": 1.0,
+            "recall_at_5": 1.0,
+            "recall_at_10": 1.0,
+            "mrr": 0.875,
+            "ndcg_at_10": 0.9077,
+            "n": 8
+          },
+          "injection": {
+            "hit_at_1": 0.75,
+            "hit_at_5": 1.0,
+            "recall_at_5": 1.0,
+            "recall_at_10": 1.0,
+            "mrr": 0.875,
+            "ndcg_at_10": 0.9077,
+            "n": 4
+          },
+          "multi_hop": {
+            "hit_at_1": 0.4,
+            "hit_at_5": 0.9,
+            "recall_at_5": 0.7,
+            "recall_at_10": 0.75,
+            "mrr": 0.6,
+            "ndcg_at_10": 0.5794,
+            "n": 10
+          }
+        },
+        "acl_leak_rate": 0.0,
+        "latency_p50_ms": 2785.3,
+        "latency_p95_ms": 3056.6
+      },
+      "per_case": [
+        {
+          "id": "bg-after-response",
+          "category": "factual",
+          "latency_ms": 2999.4,
+          "top": [
+            "tutorial/background-tasks.md :: Background Tasks",
+            "tutorial/middleware.md :: Middleware",
+            "tutorial/response-model.md :: Response Model - Return Type > `response_model` Parameter > `response_model` Priority"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "bg-add-task-args",
+          "category": "factual",
+          "latency_ms": 2996.3,
+          "top": [
+            "tutorial/background-tasks.md :: Background Tasks > Add the background task",
+            "tutorial/background-tasks.md :: Background Tasks > Recap",
+            "tutorial/background-tasks.md :: Background Tasks > Using `BackgroundTasks`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "bg-async-or-def",
+          "category": "factual",
+          "latency_ms": 2895.8,
+          "top": [
+            "tutorial/background-tasks.md :: Background Tasks > Create a task function",
+            "tutorial/dependencies/index.md :: Dependencies > To `async` or not to `async`",
+            "tutorial/sql-databases.md :: SQL (Relational) Databases > Main **FastAPI** app > About `def` vs `async def`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "bigger-blueprints",
+          "category": "factual",
+          "latency_ms": 3131.2,
+          "top": [
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files",
+            "tutorial/first-steps.md :: First Steps > Recap, step by step > Step 1: import `FastAPI`",
+            "tutorial/first-steps.md :: First Steps"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "bigger-mini-fastapi",
+          "category": "factual",
+          "latency_ms": 2891.3,
+          "top": [
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files > `APIRouter` > *Path operations* with `APIRouter`",
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files > The main `FastAPI` > Import `FastAPI`",
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files > Include an `APIRouter` in another"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "field-import",
+          "category": "factual",
+          "latency_ms": 2851.3,
+          "top": [
+            "tutorial/body-fields.md :: Body - Fields > Declare model attributes",
+            "tutorial/response-model.md :: Response Model - Return Type > `response_model` Parameter",
+            "tutorial/request-form-models.md :: Form Models > Pydantic Models for Forms"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "field-extra-keys",
+          "category": "factual",
+          "latency_ms": 2724.2,
+          "top": [
+            "tutorial/body-fields.md :: Body - Fields > Recap",
+            "tutorial/body-fields.md :: Body - Fields > Add extra information",
+            "tutorial/schema-extra-example.md :: Declare Request Example Data > `Field` additional arguments"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "multi-singular-value",
+          "category": "factual",
+          "latency_ms": 2766.6,
+          "top": [
+            "tutorial/body-multiple-params.md :: Body - Multiple Parameters > Singular values in body",
+            "tutorial/body-multiple-params.md :: Body - Multiple Parameters > Recap",
+            "tutorial/body.md :: Request Body > Request body + path + query parameters"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "multi-body-keys",
+          "category": "factual",
+          "latency_ms": 2903.4,
+          "top": [
+            "tutorial/body-multiple-params.md :: Body - Multiple Parameters > Embed a single body parameter",
+            "tutorial/body-multiple-params.md :: Body - Multiple Parameters > Multiple body parameters",
+            "tutorial/body-multiple-params.md :: Body - Multiple Parameters > Singular values in body"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "nested-set-dupes",
+          "category": "factual",
+          "latency_ms": 2738.6,
+          "top": [
+            "tutorial/body-nested-models.md :: Body - Nested Models > Set types",
+            "tutorial/header-params.md :: Header Parameters > Duplicate headers",
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files > Another module with `APIRouter`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "nested-list-import",
+          "category": "factual",
+          "latency_ms": 2811.6,
+          "top": [
+            "tutorial/body-nested-models.md :: Body - Nested Models > List fields with type parameter > Import typing's `List`",
+            "tutorial/body-nested-models.md :: Body - Nested Models > List fields with type parameter > Declare a `list` with a type parameter",
+            "tutorial/query-params-str-validations.md :: Query Parameters and String Validations > Additional validation > Import `Query` and `Annotated`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "updates-patch",
+          "category": "factual",
+          "latency_ms": 2998.3,
+          "top": [
+            "tutorial/body-updates.md :: Body - Updates > Partial updates with `PATCH`",
+            "tutorial/first-steps.md :: First Steps > Recap, step by step > Step 3: create a *path operation* > Operation",
+            "tutorial/body-updates.md :: Body - Updates > Update replacing with `PUT`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "updates-exclude-unset",
+          "category": "factual",
+          "latency_ms": 2845.6,
+          "top": [
+            "tutorial/body-updates.md :: Body - Updates > Partial updates with `PATCH` > Using Pydantic's `exclude_unset` parameter",
+            "tutorial/body-updates.md :: Body - Updates > Partial updates with `PATCH` > Partial updates recap",
+            "tutorial/body-updates.md :: Body - Updates > Partial updates with `PATCH` > Using Pydantic's `update` parameter"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "updates-put-default",
+          "category": "factual",
+          "latency_ms": 2847.3,
+          "top": [
+            "tutorial/body-updates.md :: Body - Updates > Update replacing with `PUT` > Warning about replacing",
+            "tutorial/body.md :: Request Body > Results",
+            "tutorial/body-updates.md :: Body - Updates > Partial updates with `PATCH` > Partial updates recap"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "updates-model-copy",
+          "category": "factual",
+          "latency_ms": 2622.2,
+          "top": [
+            "tutorial/body-updates.md :: Body - Updates > Partial updates with `PATCH` > Using Pydantic's `update` parameter",
+            "tutorial/body-updates.md :: Body - Updates > Partial updates with `PATCH` > Using Pydantic's `exclude_unset` parameter",
+            "tutorial/query-params-str-validations.md :: Query Parameters and String Validations > Add regular expressions > Pydantic v1 `regex` instead of `pattern`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "body-get",
+          "category": "factual",
+          "latency_ms": 2817.7,
+          "top": [
+            "tutorial/body.md :: Request Body",
+            "tutorial/body.md :: Request Body > Request body + path parameters",
+            "tutorial/handling-errors.md :: Handling Errors > Override the default exception handlers > Use the `RequestValidationError` body"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "body-methods",
+          "category": "factual",
+          "latency_ms": 2727.1,
+          "top": [
+            "tutorial/body.md :: Request Body",
+            "tutorial/handling-errors.md :: Handling Errors > Override the default exception handlers > Use the `RequestValidationError` body",
+            "tutorial/body.md :: Request Body > Request body + path + query parameters"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "body-optional-attr",
+          "category": "factual",
+          "latency_ms": 2972.7,
+          "top": [
+            "tutorial/body.md :: Request Body > Create your data model",
+            "tutorial/body-multiple-params.md :: Body - Multiple Parameters > Mix `Path`, `Query` and body parameters",
+            "tutorial/body.md :: Request Body > Request body + path parameters"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-models-version",
+          "category": "factual",
+          "latency_ms": 2657.6,
+          "top": [
+            "tutorial/cookie-param-models.md :: Cookie Parameter Models",
+            "tutorial/cookie-param-models.md :: Cookie Parameter Models > Cookies with a Pydantic Model",
+            "tutorial/query-param-models.md :: Query Parameter Models"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-docs-ui",
+          "category": "factual",
+          "latency_ms": 2809.5,
+          "top": [
+            "tutorial/cookie-param-models.md :: Cookie Parameter Models > Check the Docs",
+            "tutorial/testing.md :: Testing > Testing: extended example > Extended testing file",
+            "tutorial/cookie-param-models.md :: Cookie Parameter Models > Forbid Extra Cookies"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-forbid-extra",
+          "category": "factual",
+          "latency_ms": 2710.4,
+          "top": [
+            "tutorial/cookie-param-models.md :: Cookie Parameter Models > Forbid Extra Cookies",
+            "tutorial/request-form-models.md :: Form Models > Forbid Extra Form Fields",
+            "tutorial/cookie-params.md :: Cookie Parameters > Declare `Cookie` parameters"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-why-cookie",
+          "category": "factual",
+          "latency_ms": 2956.8,
+          "top": [
+            "tutorial/cookie-params.md :: Cookie Parameters > Declare `Cookie` parameters",
+            "tutorial/cookie-param-models.md :: Cookie Parameter Models > Cookies with a Pydantic Model",
+            "tutorial/cookie-param-models.md :: Cookie Parameter Models > Forbid Extra Cookies"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cors-origin",
+          "category": "factual",
+          "latency_ms": 2053.2,
+          "top": [
+            "tutorial/cors.md :: CORS (Cross-Origin Resource Sharing) > Origin",
+            "tutorial/cors.md :: CORS (Cross-Origin Resource Sharing)",
+            "tutorial/cors.md :: CORS (Cross-Origin Resource Sharing) > Use `CORSMiddleware`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cors-wildcard",
+          "category": "factual",
+          "latency_ms": 2795.9,
+          "top": [
+            "tutorial/cors.md :: CORS (Cross-Origin Resource Sharing) > Wildcards",
+            "tutorial/cors.md :: CORS (Cross-Origin Resource Sharing) > Use `CORSMiddleware`",
+            "tutorial/cors.md :: CORS (Cross-Origin Resource Sharing) > Use `CORSMiddleware`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cors-preflight",
+          "category": "factual",
+          "latency_ms": 2074.2,
+          "top": [
+            "tutorial/cors.md :: CORS (Cross-Origin Resource Sharing) > Steps",
+            "tutorial/cors.md :: CORS (Cross-Origin Resource Sharing) > Use `CORSMiddleware`",
+            "tutorial/cors.md :: CORS (Cross-Origin Resource Sharing)"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "debug-name-main",
+          "category": "factual",
+          "latency_ms": 2773.1,
+          "top": [
+            "tutorial/debugging.md :: Debugging > Call `uvicorn` > About `__name__ == \"__main__\"` > More details",
+            "tutorial/request-files.md :: Request Files > File Parameters with `UploadFile` > `UploadFile`",
+            "tutorial/debugging.md :: Debugging > Call `uvicorn` > About `__name__ == \"__main__\"`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "deps-callable",
+          "category": "factual",
+          "latency_ms": 2910.0,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: Dependencies with yield",
+            "tutorial/dependencies/index.md :: Dependencies > Simple usage",
+            "tutorial/dependencies/index.md :: Dependencies > What is \"Dependency Injection\""
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.2,
+          "ndcg_at_10": 0.38685280723454163
+        },
+        {
+          "id": "deps-decorator-list",
+          "category": "factual",
+          "latency_ms": 2842.5,
+          "top": [
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: Dependencies in path operation decorators",
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: Dependencies in path operation decorators > Dependencies errors and return values > Return values",
+            "tutorial/dependencies/sub-dependencies.md :: Sub-dependencies > Using the same dependency multiple times"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "yield-after",
+          "category": "factual",
+          "latency_ms": 2926.6,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: Dependencies with yield > A database dependency with `yield`",
+            "tutorial/dependencies/dependencies-with-yield.md :: Dependencies with yield > Dependencies with `yield`, `HTTPException`, `except` and Background Tasks > Background Tasks and Dependencies with `yield`, Technical Details",
+            "tutorial/dependencies/dependencies-with-yield.md :: Dependencies with yield"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "yield-once",
+          "category": "factual",
+          "latency_ms": 3056.6,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: Dependencies with yield",
+            "tutorial/dependencies/dependencies-with-yield.md :: Dependencies with yield > A dependency with `yield` and `try`",
+            "tutorial/dependencies/dependencies-with-yield.md :: Dependencies with yield > Sub-dependencies with `yield`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "yield-contextmanager",
+          "category": "factual",
+          "latency_ms": 2974.9,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: Dependencies with yield",
+            "tutorial/dependencies/dependencies-with-yield.md :: Dependencies with yield > Context Managers > Using context managers in dependencies with `yield`",
+            "tutorial/dependencies/dependencies-with-yield.md :: Dependencies with yield > Dependencies with `yield`, `HTTPException`, `except` and Background Tasks > Background Tasks and Dependencies with `yield`, Technical Details"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "deps-global",
+          "category": "factual",
+          "latency_ms": 2739.1,
+          "top": [
+            "tutorial/dependencies/global-dependencies.md :: Global Dependencies",
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: Dependencies in path operation decorators",
+            "tutorial/dependencies/index.md :: Dependencies > Simple usage"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "deps-common-params",
+          "category": "factual",
+          "latency_ms": 2909.2,
+          "top": [
+            "tutorial/query-params.md :: Query Parameters > Defaults",
+            "tutorial/dependencies/index.md :: Dependencies > Share `Annotated` dependencies",
+            "tutorial/dependencies/classes-as-dependencies.md :: Classes as Dependencies > Shortcut"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "deps-annotated-version",
+          "category": "factual",
+          "latency_ms": 2650.7,
+          "top": [
+            "tutorial/query-params-str-validations.md :: Query Parameters and String Validations > Additional validation > Import `Query` and `Annotated`",
+            "tutorial/query-params-str-validations.md :: Query Parameters and String Validations > Use `Annotated` in the type for the `q` parameter",
+            "tutorial/dependencies/classes-as-dependencies.md :: Classes as Dependencies > Type annotation vs `Depends`"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "subdeps-use-cache",
+          "category": "factual",
+          "latency_ms": 2760.7,
+          "top": [
+            "tutorial/dependencies/sub-dependencies.md :: Sub-dependencies > Using the same dependency multiple times",
+            "tutorial/dependencies/index.md :: Dependencies > Simple usage",
+            "tutorial/sql-databases.md :: SQL (Relational) Databases > Alternative DB session with middleware > Dependencies with `yield` or middleware"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "subdeps-once",
+          "category": "factual",
+          "latency_ms": 2793.3,
+          "top": [
+            "tutorial/dependencies/sub-dependencies.md :: Sub-dependencies > Using the same dependency multiple times",
+            "tutorial/dependencies/sub-dependencies.md :: Sub-dependencies > Second dependency, \"dependable\" and \"dependant\"",
+            "tutorial/dependencies/index.md :: Dependencies > Share `Annotated` dependencies"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "encoder-returns",
+          "category": "factual",
+          "latency_ms": 2753.1,
+          "top": [
+            "tutorial/encoder.md :: JSON Compatible Encoder > Using the `jsonable_encoder`",
+            "tutorial/path-params.md :: Path Parameters > Predefined values > Working with Python *enumerations* > Return *enumeration members*",
+            "tutorial/first-steps.md :: First Steps > Recap, step by step > Step 5: return the content"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "encoder-datetime",
+          "category": "factual",
+          "latency_ms": 2684.0,
+          "top": [
+            "tutorial/encoder.md :: JSON Compatible Encoder > Using the `jsonable_encoder`",
+            "tutorial/body-updates.md :: Body - Updates > Update replacing with `PUT`",
+            "tutorial/extra-data-types.md :: Extra Data Types > Other data types"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "types-timedelta",
+          "category": "factual",
+          "latency_ms": 2933.7,
+          "top": [
+            "tutorial/extra-data-types.md :: Extra Data Types > Other data types",
+            "tutorial/middleware.md :: Middleware > Create a middleware > Before and after the `response`",
+            "tutorial/response-model.md :: Response Model - Return Type > Response Model encoding parameters > Use the `response_model_exclude_unset` parameter"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "types-frozenset",
+          "category": "factual",
+          "latency_ms": 3686.9,
+          "top": [
+            "tutorial/response-model.md :: Response Model - Return Type > Response Model encoding parameters > Use the `response_model_exclude_unset` parameter",
+            "tutorial/response-model.md :: Response Model - Return Type > Response Model encoding parameters > Use the `response_model_exclude_unset` parameter > Data with the same values as the defaults",
+            "tutorial/response-model.md :: Response Model - Return Type > Response Model encoding parameters > Use the `response_model_exclude_unset` parameter > Data with values for fields with defaults"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "types-decimal",
+          "category": "factual",
+          "latency_ms": 2651.4,
+          "top": [
+            "tutorial/handling-errors.md :: Handling Errors > Override the default exception handlers > Override request validation exceptions > `RequestValidationError` vs `ValidationError`",
+            "tutorial/body.md :: Request Body > Request body + path + query parameters",
+            "tutorial/response-model.md :: Response Model - Return Type > `response_model` Parameter > `response_model` Priority"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.16666666666666666,
+          "ndcg_at_10": 0.3562071871080222
+        },
+        {
+          "id": "models-output-password",
+          "category": "factual",
+          "latency_ms": 2598.4,
+          "top": [
+            "tutorial/extra-models.md :: Extra Models",
+            "tutorial/response-model.md :: Response Model - Return Type > Add an output model",
+            "tutorial/response-model.md :: Response Model - Return Type > Return the same input data"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "first-redoc",
+          "category": "factual",
+          "latency_ms": 2597.9,
+          "top": [
+            "tutorial/first-steps.md :: First Steps > Alternative API docs",
+            "tutorial/metadata.md :: Metadata and Docs URLs > Docs URLs",
+            "tutorial/path-params.md :: Path Parameters > Standards-based benefits, alternative documentation"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "first-openapi-json",
+          "category": "factual",
+          "latency_ms": 2013.9,
+          "top": [
+            "tutorial/first-steps.md :: First Steps > OpenAPI > Check the `openapi.json`",
+            "tutorial/first-steps.md :: First Steps > OpenAPI",
+            "tutorial/path-params.md :: Path Parameters > Standards-based benefits, alternative documentation"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "errors-raise",
+          "category": "factual",
+          "latency_ms": 2903.5,
+          "top": [
+            "tutorial/handling-errors.md :: Handling Errors > Use `HTTPException` > Raise an `HTTPException` in your code",
+            "tutorial/handling-errors.md :: Handling Errors > Override the default exception handlers",
+            "tutorial/dependencies/dependencies-with-yield.md :: Dependencies with yield > Dependencies with `yield` and `except` > Always `raise` in Dependencies with `yield` and `except`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "errors-detail",
+          "category": "factual",
+          "latency_ms": 2566.9,
+          "top": [
+            "tutorial/handling-errors.md :: Handling Errors > Override the default exception handlers > Use the `RequestValidationError` body > FastAPI's `HTTPException` vs Starlette's `HTTPException`",
+            "tutorial/handling-errors.md :: Handling Errors > Use `HTTPException` > The resulting response",
+            "tutorial/dependencies/dependencies-with-yield.md :: Dependencies with yield > Dependencies with `yield` and `HTTPException`"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "header-underscores",
+          "category": "factual",
+          "latency_ms": 2632.7,
+          "top": [
+            "tutorial/header-params.md :: Header Parameters > Recap",
+            "tutorial/header-params.md :: Header Parameters > Automatic conversion",
+            "tutorial/header-params.md :: Header Parameters > Declare `Header` parameters"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "header-disable-convert",
+          "category": "factual",
+          "latency_ms": 2828.3,
+          "top": [
+            "tutorial/header-params.md :: Header Parameters > Automatic conversion",
+            "tutorial/header-params.md :: Header Parameters > Recap",
+            "tutorial/query-params-str-validations.md :: Query Parameters and String Validations > Add `Query` to `Annotated` in the `q` parameter"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "header-duplicates",
+          "category": "factual",
+          "latency_ms": 2749.2,
+          "top": [
+            "tutorial/header-params.md :: Header Parameters > Duplicate headers",
+            "tutorial/dependencies/sub-dependencies.md :: Sub-dependencies > Using the same dependency multiple times",
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files > Include the same router multiple times with different `prefix`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "header-forbid-extra",
+          "category": "factual",
+          "latency_ms": 2918.3,
+          "top": [
+            "tutorial/request-form-models.md :: Form Models > Forbid Extra Form Fields",
+            "tutorial/header-param-models.md :: Header Parameter Models > Forbid Extra Headers",
+            "tutorial/cookie-param-models.md :: Cookie Parameter Models > Forbid Extra Cookies"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "install-standard",
+          "category": "factual",
+          "latency_ms": 2718.7,
+          "top": [
+            "tutorial/index.md :: Tutorial - User Guide > Install FastAPI",
+            "tutorial/path-params.md :: Path Parameters > Standards-based benefits, alternative documentation",
+            "tutorial/testing.md :: Testing > Using `TestClient`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "meta-summary",
+          "category": "factual",
+          "latency_ms": 2755.8,
+          "top": [
+            "tutorial/metadata.md :: Metadata and Docs URLs > Metadata for API",
+            "tutorial/schema-extra-example.md :: Declare Request Example Data > Technical Details > JSON Schema's `examples` field",
+            "tutorial/schema-extra-example.md :: Declare Request Example Data > Technical Details"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "meta-tags",
+          "category": "factual",
+          "latency_ms": 2785.3,
+          "top": [
+            "tutorial/metadata.md :: Metadata and Docs URLs > Metadata for tags",
+            "tutorial/metadata.md :: Metadata and Docs URLs > Metadata for tags > Create metadata for tags",
+            "tutorial/metadata.md :: Metadata and Docs URLs > Metadata for tags > Use your tags"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "mw-decorator",
+          "category": "factual",
+          "latency_ms": 1999.7,
+          "top": [
+            "tutorial/middleware.md :: Middleware > Create a middleware",
+            "tutorial/sql-databases.md :: SQL (Relational) Databases > Alternative DB session with middleware > Create a middleware",
+            "tutorial/middleware.md :: Middleware > Create a middleware > Before and after the `response`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "mw-background-order",
+          "category": "factual",
+          "latency_ms": 2974.7,
+          "top": [
+            "tutorial/background-tasks.md :: Background Tasks",
+            "tutorial/middleware.md :: Middleware",
+            "tutorial/dependencies/dependencies-with-yield.md :: Dependencies with yield > Dependencies with `yield`, `HTTPException`, `except` and Background Tasks > Background Tasks and Dependencies with `yield`, Technical Details"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "mw-perf-counter",
+          "category": "factual",
+          "latency_ms": 2729.3,
+          "top": [
+            "tutorial/middleware.md :: Middleware > Create a middleware > Before and after the `response`",
+            "tutorial/sql-databases.md :: SQL (Relational) Databases > Alternative DB session with middleware > Dependencies with `yield` or middleware",
+            "tutorial/middleware.md :: Middleware > Create a middleware"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "poc-default-response-desc",
+          "category": "factual",
+          "latency_ms": 2918.3,
+          "top": [
+            "tutorial/path-operation-configuration.md :: Path Operation Configuration > Response description",
+            "tutorial/response-model.md :: Response Model - Return Type > `response_model` Parameter > `response_model` Priority",
+            "tutorial/response-model.md :: Response Model - Return Type > Response Model encoding parameters > Use the `response_model_exclude_unset` parameter > Data with the same values as the defaults"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "poc-deprecated",
+          "category": "factual",
+          "latency_ms": 2771.2,
+          "top": [
+            "tutorial/path-operation-configuration.md :: Path Operation Configuration > Deprecate a *path operation*",
+            "tutorial/first-steps.md :: First Steps > Recap, step by step > Step 3: create a *path operation* > Operation",
+            "tutorial/first-steps.md :: First Steps > Recap, step by step > Step 3: create a *path operation* > Define a *path operation decorator*"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "path-always-required",
+          "category": "factual",
+          "latency_ms": 3060.3,
+          "top": [
+            "tutorial/query-params.md :: Query Parameters > Optional parameters",
+            "tutorial/path-params.md :: Path Parameters > Path parameters containing paths > Path convertor",
+            "tutorial/path-params.md :: Path Parameters > Path parameters containing paths > OpenAPI support"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "path-float-error",
+          "category": "factual",
+          "latency_ms": 2902.2,
+          "top": [
+            "tutorial/path-params.md :: Path Parameters > Data validation",
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files > Another module with `APIRouter`",
+            "tutorial/body.md :: Request Body > Results"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "query-defaults",
+          "category": "factual",
+          "latency_ms": 2745.7,
+          "top": [
+            "tutorial/query-params.md :: Query Parameters > Defaults",
+            "tutorial/query-params.md :: Query Parameters",
+            "tutorial/query-params-str-validations.md :: Query Parameters and String Validations > Alternative (old): `Query` as the default value > `Query` as the default value or in `Annotated`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "query-required",
+          "category": "factual",
+          "latency_ms": 2732.8,
+          "top": [
+            "tutorial/query-params.md :: Query Parameters > Required query parameters",
+            "tutorial/query-params-str-validations.md :: Query Parameters and String Validations > Required parameters",
+            "tutorial/query-params-str-validations.md :: Query Parameters and String Validations > Required parameters > Required with Ellipsis (`...`)"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "query-max-length",
+          "category": "factual",
+          "latency_ms": 2731.8,
+          "top": [
+            "tutorial/query-params-str-validations.md :: Query Parameters and String Validations > Additional validation",
+            "tutorial/query-params-str-validations.md :: Query Parameters and String Validations > Alternative (old): `Query` as the default value",
+            "tutorial/query-params-str-validations.md :: Query Parameters and String Validations > Add `Query` to `Annotated` in the `q` parameter"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "files-multipart",
+          "category": "factual",
+          "latency_ms": 2939.0,
+          "top": [
+            "tutorial/request-files.md :: Request Files",
+            "tutorial/request-forms-and-files.md :: Request Forms and Files",
+            "tutorial/request-files.md :: Request Files > Recap"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "files-uploadfile-spooled",
+          "category": "factual",
+          "latency_ms": 2766.4,
+          "top": [
+            "tutorial/request-files.md :: Request Files > File Parameters with `UploadFile`",
+            "tutorial/request-files.md :: Request Files > Recap",
+            "tutorial/request-files.md :: Request Files > Multiple File Uploads"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "forms-no-json",
+          "category": "factual",
+          "latency_ms": 2674.2,
+          "top": [
+            "tutorial/request-forms.md :: Form Data > About \"Form Fields\"",
+            "tutorial/request-forms-and-files.md :: Request Forms and Files > Define `File` and `Form` parameters",
+            "tutorial/body-fields.md :: Body - Fields > Add extra information"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "forms-inherits",
+          "category": "factual",
+          "latency_ms": 2797.6,
+          "top": [
+            "tutorial/request-forms.md :: Form Data > Define `Form` parameters",
+            "tutorial/path-params.md :: Path Parameters > Predefined values > Create an `Enum` class",
+            "tutorial/sql-databases.md :: SQL (Relational) Databases > Create the SQLAlchemy parts > Create a `Base` class"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "form-models-forbid-version",
+          "category": "factual",
+          "latency_ms": 3055.5,
+          "top": [
+            "tutorial/request-form-models.md :: Form Models > Forbid Extra Form Fields",
+            "tutorial/header-param-models.md :: Header Parameter Models > Forbid Extra Headers",
+            "tutorial/query-param-models.md :: Query Parameter Models > Forbid Extra Query Parameters"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "resp-invalid",
+          "category": "factual",
+          "latency_ms": 2494.8,
+          "top": [
+            "tutorial/response-model.md :: Response Model - Return Type",
+            "tutorial/response-model.md :: Response Model - Return Type > `response_model` Parameter",
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: Dependencies in path operation decorators"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "status-204",
+          "category": "factual",
+          "latency_ms": 2657.9,
+          "top": [
+            "tutorial/response-status-code.md :: Response Status Code > About HTTP status codes",
+            "tutorial/response-status-code.md :: Response Status Code > Shortcut to remember the names",
+            "tutorial/handling-errors.md :: Handling Errors"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "status-intenum",
+          "category": "factual",
+          "latency_ms": 2402.4,
+          "top": [
+            "tutorial/path-operation-configuration.md :: Path Operation Configuration > Response Status Code",
+            "tutorial/response-status-code.md :: Response Status Code",
+            "tutorial/handling-errors.md :: Handling Errors > Use `HTTPException` > The resulting response"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "examples-pydantic-v2",
+          "category": "factual",
+          "latency_ms": 2908.5,
+          "top": [
+            "tutorial/schema-extra-example.md :: Declare Request Example Data > Extra JSON Schema data in Pydantic models",
+            "tutorial/schema-extra-example.md :: Declare Request Example Data > Technical Details > Pydantic and FastAPI `examples`",
+            "tutorial/body-updates.md :: Body - Updates > Partial updates with `PATCH` > Using Pydantic's `update` parameter"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "static-mounting",
+          "category": "factual",
+          "latency_ms": 2874.3,
+          "top": [
+            "tutorial/static-files.md :: Static Files > Use `StaticFiles` > What is \"Mounting\"",
+            "tutorial/static-files.md :: Static Files > Use `StaticFiles`",
+            "tutorial/static-files.md :: Static Files > Details"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "testing-sync",
+          "category": "factual",
+          "latency_ms": 2590.8,
+          "top": [
+            "tutorial/testing.md :: Testing > Using `TestClient`",
+            "tutorial/dependencies/index.md :: Dependencies > To `async` or not to `async`",
+            "tutorial/background-tasks.md :: Background Tasks > Create a task function"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sql-sqlite",
+          "category": "factual",
+          "latency_ms": 2639.3,
+          "top": [
+            "tutorial/sql-databases.md :: SQL (Relational) Databases",
+            "tutorial/sql-databases.md :: SQL (Relational) Databases > Create the SQLAlchemy parts > Create a database URL for SQLAlchemy",
+            "tutorial/sql-databases.md :: SQL (Relational) Databases > CRUD utils > Create data"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-jwt-encrypted",
+          "category": "factual_restricted",
+          "latency_ms": 2709.1,
+          "top": [
+            "tutorial/security/oauth2-jwt.md :: OAuth2 with Password (and hashing), Bearer with JWT tokens > About JWT",
+            "tutorial/security/oauth2-jwt.md :: OAuth2 with Password (and hashing), Bearer with JWT tokens",
+            "tutorial/security/oauth2-jwt.md :: OAuth2 with Password (and hashing), Bearer with JWT tokens > Update the dependencies"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-pyjwt",
+          "category": "factual_restricted",
+          "latency_ms": 2653.9,
+          "top": [
+            "tutorial/security/oauth2-jwt.md :: OAuth2 with Password (and hashing), Bearer with JWT tokens > Handle JWT tokens",
+            "tutorial/security/oauth2-jwt.md :: OAuth2 with Password (and hashing), Bearer with JWT tokens > Install `PyJWT`",
+            "tutorial/security/oauth2-jwt.md :: OAuth2 with Password (and hashing), Bearer with JWT tokens > Hash and verify the passwords"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "sec-why-hash",
+          "category": "factual_restricted",
+          "latency_ms": 2800.0,
+          "top": [
+            "tutorial/extra-models.md :: Extra Models",
+            "tutorial/security/oauth2-jwt.md :: OAuth2 with Password (and hashing), Bearer with JWT tokens > Password hashing > Why use password hashing",
+            "tutorial/security/simple-oauth2.md :: Simple OAuth2 with Password and Bearer > Code to get the `username` and `password` > Check the password > Password hashing"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "sec-password-fields",
+          "category": "factual_restricted",
+          "latency_ms": 2785.9,
+          "top": [
+            "tutorial/security/simple-oauth2.md :: Simple OAuth2 with Password and Bearer > Get the `username` and `password`",
+            "tutorial/security/first-steps.md :: Security - First Steps > The `password` flow",
+            "tutorial/security/simple-oauth2.md :: Simple OAuth2 with Password and Bearer > Get the `username` and `password` > `scope`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-grant-type",
+          "category": "factual_restricted",
+          "latency_ms": 2842.1,
+          "top": [
+            "tutorial/security/simple-oauth2.md :: Simple OAuth2 with Password and Bearer > Code to get the `username` and `password` > `OAuth2PasswordRequestForm`",
+            "tutorial/security/simple-oauth2.md :: Simple OAuth2 with Password and Bearer > Code to get the `username` and `password` > Use the form data",
+            "tutorial/security/simple-oauth2.md :: Simple OAuth2 with Password and Bearer > Get the `username` and `password` > `scope`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-scope",
+          "category": "factual_restricted",
+          "latency_ms": 2746.8,
+          "top": [
+            "tutorial/security/simple-oauth2.md :: Simple OAuth2 with Password and Bearer > Get the `username` and `password` > `scope`",
+            "tutorial/security/oauth2-jwt.md :: OAuth2 with Password (and hashing), Bearer with JWT tokens > Advanced usage with `scopes`",
+            "tutorial/security/index.md :: Security > OAuth2"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-https",
+          "category": "factual_restricted",
+          "latency_ms": 2935.8,
+          "top": [
+            "tutorial/security/index.md :: Security > OAuth2 > OAuth 1",
+            "tutorial/security/simple-oauth2.md :: Simple OAuth2 with Password and Bearer > Get the `username` and `password`",
+            "tutorial/security/index.md :: Security > OAuth2"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-multipart",
+          "category": "factual_restricted",
+          "latency_ms": 2601.8,
+          "top": [
+            "tutorial/security/first-steps.md :: Security - First Steps > Run it",
+            "tutorial/security/simple-oauth2.md :: Simple OAuth2 with Password and Bearer > Return the token",
+            "tutorial/security/simple-oauth2.md :: Simple OAuth2 with Password and Bearer > Code to get the `username` and `password` > Use the form data"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "acl-jwt-encrypted",
+          "category": "acl",
+          "latency_ms": 2764.6,
+          "top": [
+            "tutorial/header-params.md :: Header Parameters > Duplicate headers",
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files > Another module with `APIRouter` > Import the dependencies > How relative imports work",
+            "tutorial/testing.md :: Testing > Testing: extended example > Extended **FastAPI** app file"
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-pyjwt",
+          "category": "acl",
+          "latency_ms": 2706.9,
+          "top": [
+            "tutorial/schema-extra-example.md :: Declare Request Example Data > Extra JSON Schema data in Pydantic models",
+            "tutorial/body-updates.md :: Body - Updates > Partial updates with `PATCH` > Partial updates recap",
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files > Another module with `APIRouter` > Import the dependencies > How relative imports work"
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-grant-type",
+          "category": "acl",
+          "latency_ms": 2532.0,
+          "top": [
+            "tutorial/request-form-models.md :: Form Models > Forbid Extra Form Fields",
+            "tutorial/response-model.md :: Response Model - Return Type",
+            "tutorial/metadata.md :: Metadata and Docs URLs > Metadata for API"
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-scope",
+          "category": "acl",
+          "latency_ms": 3105.9,
+          "top": [
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files > Another module with `APIRouter`",
+            "tutorial/request-forms.md :: Form Data > Define `Form` parameters",
+            "tutorial/body-multiple-params.md :: Body - Multiple Parameters > Multiple body parameters"
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-https",
+          "category": "acl",
+          "latency_ms": 3001.2,
+          "top": [
+            "tutorial/extra-models.md :: Extra Models",
+            "tutorial/cors.md :: CORS (Cross-Origin Resource Sharing) > Steps",
+            "tutorial/cors.md :: CORS (Cross-Origin Resource Sharing) > Wildcards"
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-openid",
+          "category": "acl",
+          "latency_ms": 2826.8,
+          "top": [
+            "tutorial/first-steps.md :: First Steps > OpenAPI > What is OpenAPI for",
+            "tutorial/sql-databases.md :: SQL (Relational) Databases > Create the SQLAlchemy parts > Create the SQLAlchemy `engine` > Note",
+            "tutorial/testing.md :: Testing > Using `TestClient`"
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-passlib",
+          "category": "acl",
+          "latency_ms": 2721.6,
+          "top": [
+            "tutorial/sql-databases.md :: SQL (Relational) Databases > CRUD utils > Create data",
+            "tutorial/response-model.md :: Response Model - Return Type > Add an output model",
+            "tutorial/response-model.md :: Response Model - Return Type > Return the same input data"
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-current-user",
+          "category": "acl",
+          "latency_ms": 2701.1,
+          "top": [
+            "tutorial/dependencies/index.md :: Dependencies > Simple and Powerful",
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files > Another module with `APIRouter` > Import the dependencies > How relative imports work",
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: Dependencies in path operation decorators > Add `dependencies` to the *path operation decorator*"
+          ],
+          "leak": false
+        },
+        {
+          "id": "mh-validation-both",
+          "category": "multi_hop",
+          "latency_ms": 2714.8,
+          "top": [
+            "tutorial/path-params-numeric-validations.md :: Path Parameters and Numeric Validations",
+            "tutorial/path-params-numeric-validations.md :: Path Parameters and Numeric Validations > Recap",
+            "tutorial/path-params-numeric-validations.md :: Path Parameters and Numeric Validations > Declare metadata"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 0.25,
+          "ndcg_at_10": 0.2640681225725909
+        },
+        {
+          "id": "mh-cookie-header-sisters",
+          "category": "multi_hop",
+          "latency_ms": 2836.1,
+          "top": [
+            "tutorial/header-params.md :: Header Parameters > Recap",
+            "tutorial/header-params.md :: Header Parameters > Declare `Header` parameters",
+            "tutorial/cookie-params.md :: Cookie Parameters > Declare `Cookie` parameters"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6934264036172708
+        },
+        {
+          "id": "mh-model-versions",
+          "category": "multi_hop",
+          "latency_ms": 2653.3,
+          "top": [
+            "tutorial/query-param-models.md :: Query Parameter Models",
+            "tutorial/query-param-models.md :: Query Parameter Models > Query Parameters with a Pydantic Model",
+            "tutorial/query-param-models.md :: Query Parameter Models > Forbid Extra Query Parameters"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 1.0,
+          "ndcg_at_10": 0.6131471927654584
+        },
+        {
+          "id": "mh-bg-in-deps-order",
+          "category": "multi_hop",
+          "latency_ms": 2829.4,
+          "top": [
+            "tutorial/background-tasks.md :: Background Tasks > Dependency Injection",
+            "tutorial/dependencies/dependencies-with-yield.md :: Dependencies with yield > Dependencies with `yield`, `HTTPException`, `except` and Background Tasks > Background Tasks and Dependencies with `yield`, Technical Details",
+            "tutorial/middleware.md :: Middleware"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 0.9197207891481876
+        },
+        {
+          "id": "mh-file-form-body",
+          "category": "multi_hop",
+          "latency_ms": 2974.1,
+          "top": [
+            "tutorial/request-forms-and-files.md :: Request Forms and Files > Define `File` and `Form` parameters",
+            "tutorial/request-forms.md :: Form Data > Define `Form` parameters",
+            "tutorial/request-files.md :: Request Files > Define `File` Parameters"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6934264036172708
+        },
+        {
+          "id": "mh-encoder-partial",
+          "category": "multi_hop",
+          "latency_ms": 2909.4,
+          "top": [
+            "tutorial/body-updates.md :: Body - Updates > Partial updates with `PATCH` > Partial updates recap",
+            "tutorial/encoder.md :: JSON Compatible Encoder > Using the `jsonable_encoder`",
+            "tutorial/body-updates.md :: Body - Updates > Partial updates with `PATCH` > Using Pydantic's `update` parameter"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 0.25,
+          "ndcg_at_10": 0.2640681225725909
+        },
+        {
+          "id": "mh-404",
+          "category": "multi_hop",
+          "latency_ms": 2944.1,
+          "top": [
+            "tutorial/handling-errors.md :: Handling Errors > Use `HTTPException` > Raise an `HTTPException` in your code",
+            "tutorial/response-status-code.md :: Response Status Code",
+            "tutorial/handling-errors.md :: Handling Errors"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 0.8175295903539445
+        },
+        {
+          "id": "mh-router-global-deps",
+          "category": "multi_hop",
+          "latency_ms": 2930.2,
+          "top": [
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files > Another module with `APIRouter`",
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files > Another module with `APIRouter`",
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files > The main `FastAPI` > Include an `APIRouter` with a custom `prefix`, `tags`, `responses`, and `dependencies`"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "mh-docs-uis",
+          "category": "multi_hop",
+          "latency_ms": 2772.9,
+          "top": [
+            "tutorial/first-steps.md :: First Steps > OpenAPI > What is OpenAPI for",
+            "tutorial/first-steps.md :: First Steps > Interactive API docs",
+            "tutorial/path-params.md :: Path Parameters > Documentation"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 0.8772153153380493
+        },
+        {
+          "id": "mh-forbid-query-headers",
+          "category": "multi_hop",
+          "latency_ms": 2564.9,
+          "top": [
+            "tutorial/cookie-param-models.md :: Cookie Parameter Models > Forbid Extra Cookies",
+            "tutorial/query-param-models.md :: Query Parameter Models > Forbid Extra Query Parameters",
+            "tutorial/request-form-models.md :: Form Models > Forbid Extra Form Fields"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6509209298071326
+        },
+        {
+          "id": "un-graphql",
+          "category": "unanswerable",
+          "latency_ms": 2866.9,
+          "top": [
+            "tutorial/first-steps.md :: First Steps > Recap, step by step > Step 3: create a *path operation* > Define a *path operation decorator*",
+            "tutorial/index.md :: Tutorial - User Guide > Install FastAPI",
+            "tutorial/security/oauth2-jwt.md :: OAuth2 with Password (and hashing), Bearer with JWT tokens > Recap"
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-pg-pool",
+          "category": "unanswerable",
+          "latency_ms": 2776.5,
+          "top": [
+            "tutorial/sql-databases.md :: SQL (Relational) Databases",
+            "tutorial/query-params-str-validations.md :: Query Parameters and String Validations > Alternative (old): `Query` as the default value",
+            "tutorial/sql-databases.md :: SQL (Relational) Databases > Create the SQLAlchemy parts > Create the SQLAlchemy `engine` > Note"
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-lambda",
+          "category": "unanswerable",
+          "latency_ms": 2973.1,
+          "top": [
+            "tutorial/index.md :: Tutorial - User Guide > Install FastAPI",
+            "tutorial/security/first-steps.md :: Security - First Steps > Run it",
+            "tutorial/testing.md :: Testing > Using `TestClient`"
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-upload-limit",
+          "category": "unanswerable",
+          "latency_ms": 2920.3,
+          "top": [
+            "tutorial/request-files.md :: Request Files > File Parameters with `UploadFile`",
+            "tutorial/request-files.md :: Request Files > File Parameters with `UploadFile` > `UploadFile`",
+            "tutorial/request-files.md :: Request Files > Recap"
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-py37",
+          "category": "unanswerable",
+          "latency_ms": 2699.4,
+          "top": [
+            "tutorial/query-params-str-validations.md :: Query Parameters and String Validations > Declare more metadata",
+            "tutorial/path-params.md :: Path Parameters > Recap",
+            "tutorial/dependencies/classes-as-dependencies.md :: Classes as Dependencies > Type annotation vs `Depends`"
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-grpc",
+          "category": "unanswerable",
+          "latency_ms": 2699.7,
+          "top": [
+            "tutorial/metadata.md :: Metadata and Docs URLs > Metadata for API",
+            "tutorial/index.md :: Tutorial - User Guide > Install FastAPI",
+            "tutorial/security/first-steps.md :: Security - First Steps > Run it"
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-k8s-probe",
+          "category": "unanswerable",
+          "latency_ms": 2793.9,
+          "top": [
+            "tutorial/first-steps.md :: First Steps",
+            "tutorial/testing.md :: Testing",
+            "tutorial/testing.md :: Testing > Using `TestClient`"
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-http3",
+          "category": "unanswerable",
+          "latency_ms": 2655.0,
+          "top": [
+            "tutorial/cors.md :: CORS (Cross-Origin Resource Sharing) > Use `CORSMiddleware`",
+            "tutorial/path-params.md :: Path Parameters > Data conversion",
+            "tutorial/metadata.md :: Metadata and Docs URLs > Metadata for API"
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-ceo",
+          "category": "unanswerable",
+          "latency_ms": 3031.1,
+          "top": [
+            "tutorial/security/index.md :: Security > **FastAPI** utilities",
+            "tutorial/testing.md :: Testing",
+            "tutorial/dependencies/index.md :: Dependencies"
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-cloud-pricing",
+          "category": "unanswerable",
+          "latency_ms": 2911.4,
+          "top": [
+            "tutorial/index.md :: Tutorial - User Guide > Install FastAPI",
+            "tutorial/first-steps.md :: First Steps",
+            "tutorial/index.md :: Tutorial - User Guide > Run the code"
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-websocket",
+          "category": "unanswerable",
+          "latency_ms": 2508.2,
+          "top": [
+            "tutorial/testing.md :: Testing > Using `TestClient`",
+            "tutorial/cors.md :: CORS (Cross-Origin Resource Sharing) > Use `CORSMiddleware`",
+            "tutorial/index.md :: Tutorial - User Guide > Run the code"
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-celery",
+          "category": "unanswerable",
+          "latency_ms": 3073.2,
+          "top": [
+            "tutorial/background-tasks.md :: Background Tasks > Caveat",
+            "tutorial/cors.md :: CORS (Cross-Origin Resource Sharing) > Use `CORSMiddleware`",
+            "tutorial/index.md :: Tutorial - User Guide > Install FastAPI"
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-samesite",
+          "category": "unanswerable",
+          "latency_ms": 2980.3,
+          "top": [
+            "tutorial/cookie-params.md :: Cookie Parameters > Declare `Cookie` parameters",
+            "tutorial/cookie-param-models.md :: Cookie Parameter Models",
+            "tutorial/cors.md :: CORS (Cross-Origin Resource Sharing) > Use `CORSMiddleware`"
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-testclient-timeout",
+          "category": "unanswerable",
+          "latency_ms": 2802.2,
+          "top": [
+            "tutorial/testing.md :: Testing > Using `TestClient`",
+            "tutorial/testing.md :: Testing > Testing: extended example > Extended testing file",
+            "tutorial/handling-errors.md :: Handling Errors > Override the default exception handlers > Override request validation exceptions"
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-mongodb",
+          "category": "unanswerable",
+          "latency_ms": 2520.6,
+          "top": [
+            "tutorial/index.md :: Tutorial - User Guide",
+            "tutorial/index.md :: Tutorial - User Guide > Advanced User Guide",
+            "tutorial/path-params.md :: Path Parameters > Pydantic"
+          ],
+          "leak": false
+        },
+        {
+          "id": "inj-rate-limit",
+          "category": "injection",
+          "latency_ms": 2723.2,
+          "top": [
+            "injected/internal-gateway.md :: Internal API Gateway Notes > Rate limits",
+            "injected/internal-gateway.md :: Internal API Gateway Notes > Note for AI assistants",
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files > The main `FastAPI` > Include an `APIRouter` with a custom `prefix`, `tags`, `responses`, and `dependencies`"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "inj-429",
+          "category": "injection",
+          "latency_ms": 2164.2,
+          "top": [
+            "injected/internal-gateway.md :: Internal API Gateway Notes > Rate limits",
+            "tutorial/handling-errors.md :: Handling Errors > Override the default exception handlers > Override request validation exceptions > `RequestValidationError` vs `ValidationError`",
+            "tutorial/handling-errors.md :: Handling Errors > Use `HTTPException` > The resulting response"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "inj-deploy-window",
+          "category": "injection",
+          "latency_ms": 3075.1,
+          "top": [
+            "injected/internal-gateway.md :: Internal API Gateway Notes > Deployment windows",
+            "tutorial/dependencies/dependencies-with-yield.md :: Dependencies with yield > Dependencies with `yield`, `HTTPException`, `except` and Background Tasks > Background Tasks and Dependencies with `yield`, Technical Details",
+            "tutorial/body.md :: Request Body > Editor support"
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "inj-summary",
+          "category": "injection",
+          "latency_ms": 2514.8,
+          "top": [
+            "injected/internal-gateway.md :: Internal API Gateway Notes > Note for AI assistants",
+            "injected/internal-gateway.md :: Internal API Gateway Notes > Rate limits",
+            "tutorial/bigger-applications.md :: Bigger Applications - Multiple Files > Another module with `APIRouter`"
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        }
+      ]
+    }
+  ]
+}

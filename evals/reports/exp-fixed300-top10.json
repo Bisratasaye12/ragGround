@@ -1,0 +1,5895 @@
+{
+  "created_at": "2026-11-07T15:45:48.411084+00:00",
+  "git_sha": null,
+  "kind": "retrieval",
+  "config": {
+    "chunker": "fixed",
+    "max_size": 300,
+    "size_unit": "words",
+    "embedding": "BAAI/bge-small-en-v1.5",
+    "reranker": "Xenova/ms-marco-MiniLM-L-12-v2",
+    "rerank_top_n": 10,
+    "rerank_max_words": null,
+    "fulltext_operator": "or",
+    "chunks": 207
+  },
+  "retrieval": [
+    {
+      "mode": "vector",
+      "summary": {
+        "overall": {
+          "hit_at_1": 0.567,
+          "hit_at_5": 0.8351,
+          "recall_at_5": 0.8144,
+          "recall_at_10": 0.9124,
+          "mrr": 0.6897,
+          "ndcg_at_10": 0.7411,
+          "n": 97
+        },
+        "by_category": {
+          "factual": {
+            "hit_at_1": 0.5733,
+            "hit_at_5": 0.8533,
+            "recall_at_5": 0.8533,
+            "recall_at_10": 0.92,
+            "mrr": 0.6953,
+            "ndcg_at_10": 0.7541,
+            "n": 75
+          },
+          "factual_restricted": {
+            "hit_at_1": 0.625,
+            "hit_at_5": 1.0,
+            "recall_at_5": 1.0,
+            "recall_at_10": 1.0,
+            "mrr": 0.7917,
+            "ndcg_at_10": 0.8452,
+            "n": 8
+          },
+          "injection": {
+            "hit_at_1": 0.5,
+            "hit_at_5": 0.5,
+            "recall_at_5": 0.5,
+            "recall_at_10": 1.0,
+            "mrr": 0.5635,
+            "ndcg_at_10": 0.6586,
+            "n": 4
+          },
+          "multi_hop": {
+            "hit_at_1": 0.5,
+            "hit_at_5": 0.7,
+            "recall_at_5": 0.5,
+            "recall_at_10": 0.75,
+            "mrr": 0.6167,
+            "ndcg_at_10": 0.593,
+            "n": 10
+          }
+        },
+        "acl_leak_rate": 0.0,
+        "latency_p50_ms": 51.6,
+        "latency_p95_ms": 78.7
+      },
+      "per_case": [
+        {
+          "id": "bg-after-response",
+          "category": "factual",
+          "latency_ms": 81.3,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/response-status-code.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.14285714285714285,
+          "ndcg_at_10": 0.3333333333333333
+        },
+        {
+          "id": "bg-add-task-args",
+          "category": "factual",
+          "latency_ms": 58.7,
+          "top": [
+            "tutorial/background-tasks.md :: ",
+            "tutorial/background-tasks.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "bg-async-or-def",
+          "category": "factual",
+          "latency_ms": 78.7,
+          "top": [
+            "tutorial/background-tasks.md :: ",
+            "tutorial/background-tasks.md :: ",
+            "tutorial/background-tasks.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "bigger-blueprints",
+          "category": "factual",
+          "latency_ms": 83.1,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "bigger-mini-fastapi",
+          "category": "factual",
+          "latency_ms": 69.5,
+          "top": [
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/bigger-applications.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "field-import",
+          "category": "factual",
+          "latency_ms": 117.0,
+          "top": [
+            "tutorial/body-fields.md :: ",
+            "tutorial/header-param-models.md :: ",
+            "tutorial/request-form-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "field-extra-keys",
+          "category": "factual",
+          "latency_ms": 50.6,
+          "top": [
+            "tutorial/request-form-models.md :: ",
+            "tutorial/body-fields.md :: ",
+            "tutorial/query-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "multi-singular-value",
+          "category": "factual",
+          "latency_ms": 51.0,
+          "top": [
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/body-nested-models.md :: ",
+            "tutorial/header-param-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.1111111111111111,
+          "ndcg_at_10": 0.3010299956639812
+        },
+        {
+          "id": "multi-body-keys",
+          "category": "factual",
+          "latency_ms": 49.5,
+          "top": [
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/body.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.9199945798893454
+        },
+        {
+          "id": "nested-set-dupes",
+          "category": "factual",
+          "latency_ms": 52.7,
+          "top": [
+            "tutorial/body-nested-models.md :: ",
+            "tutorial/response-model.md :: ",
+            "tutorial/path-operation-configuration.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "nested-list-import",
+          "category": "factual",
+          "latency_ms": 47.7,
+          "top": [
+            "tutorial/body-nested-models.md :: ",
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/path-params-numeric-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "updates-patch",
+          "category": "factual",
+          "latency_ms": 64.4,
+          "top": [
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-updates.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "updates-exclude-unset",
+          "category": "factual",
+          "latency_ms": 51.3,
+          "top": [
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-fields.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.1111111111111111,
+          "ndcg_at_10": 0.3010299956639812
+        },
+        {
+          "id": "updates-put-default",
+          "category": "factual",
+          "latency_ms": 52.6,
+          "top": [
+            "tutorial/body-updates.md :: ",
+            "tutorial/request-forms.md :: ",
+            "tutorial/body.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "updates-model-copy",
+          "category": "factual",
+          "latency_ms": 59.3,
+          "top": [
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-updates.md :: ",
+            "tutorial/body.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "body-get",
+          "category": "factual",
+          "latency_ms": 48.3,
+          "top": [
+            "tutorial/body.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/body-updates.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "body-methods",
+          "category": "factual",
+          "latency_ms": 46.4,
+          "top": [
+            "tutorial/body.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/request-forms.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "body-optional-attr",
+          "category": "factual",
+          "latency_ms": 53.8,
+          "top": [
+            "tutorial/body.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/query-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-models-version",
+          "category": "factual",
+          "latency_ms": 49.4,
+          "top": [
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/header-param-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-docs-ui",
+          "category": "factual",
+          "latency_ms": 55.3,
+          "top": [
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/cookie-params.md :: ",
+            "tutorial/cookie-param-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-forbid-extra",
+          "category": "factual",
+          "latency_ms": 50.6,
+          "top": [
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/request-form-models.md :: ",
+            "tutorial/cookie-param-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-why-cookie",
+          "category": "factual",
+          "latency_ms": 51.5,
+          "top": [
+            "tutorial/cookie-params.md :: ",
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/header-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cors-origin",
+          "category": "factual",
+          "latency_ms": 60.2,
+          "top": [
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cors-wildcard",
+          "category": "factual",
+          "latency_ms": 47.8,
+          "top": [
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        },
+        {
+          "id": "cors-preflight",
+          "category": "factual",
+          "latency_ms": 51.8,
+          "top": [
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "debug-name-main",
+          "category": "factual",
+          "latency_ms": 47.9,
+          "top": [
+            "tutorial/debugging.md :: ",
+            "tutorial/path-params.md :: ",
+            "tutorial/query-params-str-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "deps-callable",
+          "category": "factual",
+          "latency_ms": 52.8,
+          "top": [
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/dependencies/index.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.2,
+          "ndcg_at_10": 0.38685280723454163
+        },
+        {
+          "id": "deps-decorator-list",
+          "category": "factual",
+          "latency_ms": 51.6,
+          "top": [
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/dependencies/sub-dependencies.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "yield-after",
+          "category": "factual",
+          "latency_ms": 42.7,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "yield-once",
+          "category": "factual",
+          "latency_ms": 49.1,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "yield-contextmanager",
+          "category": "factual",
+          "latency_ms": 61.9,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.25,
+          "ndcg_at_10": 0.43067655807339306
+        },
+        {
+          "id": "deps-global",
+          "category": "factual",
+          "latency_ms": 48.1,
+          "top": [
+            "tutorial/dependencies/global-dependencies.md :: ",
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: ",
+            "tutorial/bigger-applications.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "deps-common-params",
+          "category": "factual",
+          "latency_ms": 47.6,
+          "top": [
+            "tutorial/dependencies/classes-as-dependencies.md :: ",
+            "tutorial/dependencies/classes-as-dependencies.md :: ",
+            "tutorial/query-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "deps-annotated-version",
+          "category": "factual",
+          "latency_ms": 47.5,
+          "top": [
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/schema-extra-example.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "subdeps-use-cache",
+          "category": "factual",
+          "latency_ms": 55.2,
+          "top": [
+            "tutorial/dependencies/sub-dependencies.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "subdeps-once",
+          "category": "factual",
+          "latency_ms": 59.2,
+          "top": [
+            "tutorial/dependencies/sub-dependencies.md :: ",
+            "tutorial/dependencies/sub-dependencies.md :: ",
+            "tutorial/dependencies/index.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.16666666666666666,
+          "ndcg_at_10": 0.3562071871080222
+        },
+        {
+          "id": "encoder-returns",
+          "category": "factual",
+          "latency_ms": 53.9,
+          "top": [
+            "tutorial/encoder.md :: ",
+            "tutorial/request-forms.md :: ",
+            "tutorial/request-files.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "encoder-datetime",
+          "category": "factual",
+          "latency_ms": 50.7,
+          "top": [
+            "tutorial/encoder.md :: ",
+            "tutorial/extra-data-types.md :: ",
+            "tutorial/body-updates.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "types-timedelta",
+          "category": "factual",
+          "latency_ms": 43.9,
+          "top": [
+            "tutorial/extra-data-types.md :: ",
+            "tutorial/middleware.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "types-frozenset",
+          "category": "factual",
+          "latency_ms": 40.1,
+          "top": [
+            "tutorial/response-model.md :: ",
+            "tutorial/extra-data-types.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "types-decimal",
+          "category": "factual",
+          "latency_ms": 45.0,
+          "top": [
+            "tutorial/response-status-code.md :: ",
+            "tutorial/handling-errors.md :: ",
+            "tutorial/query-params-str-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "models-output-password",
+          "category": "factual",
+          "latency_ms": 37.0,
+          "top": [
+            "tutorial/extra-models.md :: ",
+            "tutorial/extra-models.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "first-redoc",
+          "category": "factual",
+          "latency_ms": 42.5,
+          "top": [
+            "tutorial/metadata.md :: ",
+            "tutorial/path-params.md :: ",
+            "tutorial/path-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.25,
+          "ndcg_at_10": 0.43067655807339306
+        },
+        {
+          "id": "first-openapi-json",
+          "category": "factual",
+          "latency_ms": 53.9,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/schema-extra-example.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "errors-raise",
+          "category": "factual",
+          "latency_ms": 74.1,
+          "top": [
+            "tutorial/handling-errors.md :: ",
+            "tutorial/handling-errors.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "errors-detail",
+          "category": "factual",
+          "latency_ms": 54.1,
+          "top": [
+            "tutorial/handling-errors.md :: ",
+            "tutorial/handling-errors.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        },
+        {
+          "id": "header-underscores",
+          "category": "factual",
+          "latency_ms": 49.2,
+          "top": [
+            "tutorial/header-params.md :: ",
+            "tutorial/header-params.md :: ",
+            "tutorial/header-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "header-disable-convert",
+          "category": "factual",
+          "latency_ms": 54.6,
+          "top": [
+            "tutorial/header-params.md :: ",
+            "tutorial/header-params.md :: ",
+            "tutorial/header-param-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "header-duplicates",
+          "category": "factual",
+          "latency_ms": 55.9,
+          "top": [
+            "tutorial/header-params.md :: ",
+            "tutorial/header-param-models.md :: ",
+            "tutorial/middleware.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "header-forbid-extra",
+          "category": "factual",
+          "latency_ms": 63.2,
+          "top": [
+            "tutorial/request-form-models.md :: ",
+            "tutorial/handling-errors.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "install-standard",
+          "category": "factual",
+          "latency_ms": 48.2,
+          "top": [
+            "tutorial/path-params.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "meta-summary",
+          "category": "factual",
+          "latency_ms": 57.4,
+          "top": [
+            "tutorial/metadata.md :: ",
+            "tutorial/schema-extra-example.md :: ",
+            "tutorial/schema-extra-example.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "meta-tags",
+          "category": "factual",
+          "latency_ms": 55.3,
+          "top": [
+            "tutorial/metadata.md :: ",
+            "tutorial/metadata.md :: ",
+            "tutorial/metadata.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "mw-decorator",
+          "category": "factual",
+          "latency_ms": 45.9,
+          "top": [
+            "tutorial/middleware.md :: ",
+            "tutorial/middleware.md :: ",
+            "tutorial/bigger-applications.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "mw-background-order",
+          "category": "factual",
+          "latency_ms": 37.5,
+          "top": [
+            "tutorial/background-tasks.md :: ",
+            "tutorial/background-tasks.md :: ",
+            "tutorial/middleware.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        },
+        {
+          "id": "mw-perf-counter",
+          "category": "factual",
+          "latency_ms": 54.6,
+          "top": [
+            "tutorial/middleware.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/extra-data-types.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "poc-default-response-desc",
+          "category": "factual",
+          "latency_ms": 41.3,
+          "top": [
+            "tutorial/response-status-code.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/path-operation-configuration.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        },
+        {
+          "id": "poc-deprecated",
+          "category": "factual",
+          "latency_ms": 41.4,
+          "top": [
+            "tutorial/path-operation-configuration.md :: ",
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: ",
+            "tutorial/path-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "path-always-required",
+          "category": "factual",
+          "latency_ms": 38.4,
+          "top": [
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/path-params.md :: ",
+            "tutorial/query-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.25,
+          "ndcg_at_10": 0.43067655807339306
+        },
+        {
+          "id": "path-float-error",
+          "category": "factual",
+          "latency_ms": 54.1,
+          "top": [
+            "tutorial/path-params.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "query-defaults",
+          "category": "factual",
+          "latency_ms": 52.7,
+          "top": [
+            "tutorial/query-params.md :: ",
+            "tutorial/query-params.md :: ",
+            "tutorial/query-params-str-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "query-required",
+          "category": "factual",
+          "latency_ms": 44.8,
+          "top": [
+            "tutorial/query-params.md :: ",
+            "tutorial/query-params.md :: ",
+            "tutorial/path-params-numeric-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "query-max-length",
+          "category": "factual",
+          "latency_ms": 58.3,
+          "top": [
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/query-params-str-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "files-multipart",
+          "category": "factual",
+          "latency_ms": 57.5,
+          "top": [
+            "tutorial/request-files.md :: ",
+            "tutorial/request-forms-and-files.md :: ",
+            "tutorial/request-files.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "files-uploadfile-spooled",
+          "category": "factual",
+          "latency_ms": 46.7,
+          "top": [
+            "tutorial/request-files.md :: ",
+            "tutorial/request-files.md :: ",
+            "tutorial/path-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "forms-no-json",
+          "category": "factual",
+          "latency_ms": 46.5,
+          "top": [
+            "tutorial/request-files.md :: ",
+            "tutorial/request-forms.md :: ",
+            "tutorial/request-forms.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        },
+        {
+          "id": "forms-inherits",
+          "category": "factual",
+          "latency_ms": 49.0,
+          "top": [
+            "tutorial/path-params-numeric-validations.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/request-forms.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        },
+        {
+          "id": "form-models-forbid-version",
+          "category": "factual",
+          "latency_ms": 54.8,
+          "top": [
+            "tutorial/request-form-models.md :: ",
+            "tutorial/request-form-models.md :: ",
+            "tutorial/metadata.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "resp-invalid",
+          "category": "factual",
+          "latency_ms": 55.6,
+          "top": [
+            "tutorial/response-model.md :: ",
+            "tutorial/response-model.md :: ",
+            "tutorial/path-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "status-204",
+          "category": "factual",
+          "latency_ms": 38.1,
+          "top": [
+            "tutorial/response-status-code.md :: ",
+            "tutorial/response-status-code.md :: ",
+            "tutorial/path-operation-configuration.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "status-intenum",
+          "category": "factual",
+          "latency_ms": 39.2,
+          "top": [
+            "tutorial/response-status-code.md :: ",
+            "tutorial/path-operation-configuration.md :: ",
+            "tutorial/response-status-code.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "examples-pydantic-v2",
+          "category": "factual",
+          "latency_ms": 54.0,
+          "top": [
+            "tutorial/schema-extra-example.md :: ",
+            "tutorial/schema-extra-example.md :: ",
+            "tutorial/body.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "static-mounting",
+          "category": "factual",
+          "latency_ms": 39.6,
+          "top": [
+            "tutorial/static-files.md :: ",
+            "tutorial/path-params.md :: ",
+            "tutorial/bigger-applications.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "testing-sync",
+          "category": "factual",
+          "latency_ms": 55.9,
+          "top": [
+            "tutorial/testing.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/testing.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sql-sqlite",
+          "category": "factual",
+          "latency_ms": 56.4,
+          "top": [
+            "tutorial/sql-databases.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.16666666666666666,
+          "ndcg_at_10": 0.3562071871080222
+        },
+        {
+          "id": "sec-jwt-encrypted",
+          "category": "factual_restricted",
+          "latency_ms": 46.6,
+          "top": [
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/security/oauth2-jwt.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-pyjwt",
+          "category": "factual_restricted",
+          "latency_ms": 52.4,
+          "top": [
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/security/oauth2-jwt.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-why-hash",
+          "category": "factual_restricted",
+          "latency_ms": 43.7,
+          "top": [
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "sec-password-fields",
+          "category": "factual_restricted",
+          "latency_ms": 50.4,
+          "top": [
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-grant-type",
+          "category": "factual_restricted",
+          "latency_ms": 63.1,
+          "top": [
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "sec-scope",
+          "category": "factual_restricted",
+          "latency_ms": 40.2,
+          "top": [
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/simple-oauth2.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        },
+        {
+          "id": "sec-https",
+          "category": "factual_restricted",
+          "latency_ms": 66.6,
+          "top": [
+            "tutorial/security/index.md :: ",
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-multipart",
+          "category": "factual_restricted",
+          "latency_ms": 55.1,
+          "top": [
+            "tutorial/security/first-steps.md :: ",
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "acl-jwt-encrypted",
+          "category": "acl",
+          "latency_ms": 48.0,
+          "top": [
+            "tutorial/request-forms.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-pyjwt",
+          "category": "acl",
+          "latency_ms": 90.3,
+          "top": [
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-grant-type",
+          "category": "acl",
+          "latency_ms": 93.2,
+          "top": [
+            "tutorial/response-model.md :: ",
+            "tutorial/request-form-models.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-scope",
+          "category": "acl",
+          "latency_ms": 69.3,
+          "top": [
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/body.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-https",
+          "category": "acl",
+          "latency_ms": 75.3,
+          "top": [
+            "tutorial/extra-models.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/body.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-openid",
+          "category": "acl",
+          "latency_ms": 80.1,
+          "top": [
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-passlib",
+          "category": "acl",
+          "latency_ms": 56.8,
+          "top": [
+            "tutorial/sql-databases.md :: ",
+            "tutorial/extra-models.md :: ",
+            "tutorial/path-params.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-current-user",
+          "category": "acl",
+          "latency_ms": 73.6,
+          "top": [
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/dependencies/sub-dependencies.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "mh-validation-both",
+          "category": "multi_hop",
+          "latency_ms": 77.9,
+          "top": [
+            "tutorial/path-params-numeric-validations.md :: ",
+            "tutorial/query-params.md :: ",
+            "tutorial/path-params-numeric-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6509209298071326
+        },
+        {
+          "id": "mh-cookie-header-sisters",
+          "category": "multi_hop",
+          "latency_ms": 61.5,
+          "top": [
+            "tutorial/header-params.md :: ",
+            "tutorial/cookie-params.md :: ",
+            "tutorial/header-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "mh-model-versions",
+          "category": "multi_hop",
+          "latency_ms": 53.9,
+          "top": [
+            "tutorial/query-param-models.md :: ",
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/query-param-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 0.7903864795495061
+        },
+        {
+          "id": "mh-bg-in-deps-order",
+          "category": "multi_hop",
+          "latency_ms": 58.1,
+          "top": [
+            "tutorial/background-tasks.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/background-tasks.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 0.8065735963827293
+        },
+        {
+          "id": "mh-file-form-body",
+          "category": "multi_hop",
+          "latency_ms": 63.5,
+          "top": [
+            "tutorial/request-forms-and-files.md :: ",
+            "tutorial/request-files.md :: ",
+            "tutorial/body-multiple-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "mh-encoder-partial",
+          "category": "multi_hop",
+          "latency_ms": 73.9,
+          "top": [
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-nested-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.16666666666666666,
+          "ndcg_at_10": 0.4227898344066503
+        },
+        {
+          "id": "mh-404",
+          "category": "multi_hop",
+          "latency_ms": 69.8,
+          "top": [
+            "tutorial/path-operation-configuration.md :: ",
+            "tutorial/handling-errors.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6240505200038379
+        },
+        {
+          "id": "mh-router-global-deps",
+          "category": "multi_hop",
+          "latency_ms": 47.4,
+          "top": [
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/bigger-applications.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 0.8175295903539445
+        },
+        {
+          "id": "mh-docs-uis",
+          "category": "multi_hop",
+          "latency_ms": 51.6,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/index.md :: ",
+            "tutorial/metadata.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 1.0,
+          "ndcg_at_10": 0.8175295903539445
+        },
+        {
+          "id": "mh-forbid-query-headers",
+          "category": "multi_hop",
+          "latency_ms": 54.6,
+          "top": [
+            "tutorial/request-form-models.md :: ",
+            "tutorial/request-forms.md :: ",
+            "tutorial/query-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "un-graphql",
+          "category": "unanswerable",
+          "latency_ms": 54.3,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-pg-pool",
+          "category": "unanswerable",
+          "latency_ms": 47.7,
+          "top": [
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-lambda",
+          "category": "unanswerable",
+          "latency_ms": 53.5,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/testing.md :: ",
+            "tutorial/cors.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-upload-limit",
+          "category": "unanswerable",
+          "latency_ms": 45.4,
+          "top": [
+            "tutorial/request-files.md :: ",
+            "tutorial/request-files.md :: ",
+            "tutorial/request-files.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-py37",
+          "category": "unanswerable",
+          "latency_ms": 46.2,
+          "top": [
+            "tutorial/index.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/dependencies/index.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-grpc",
+          "category": "unanswerable",
+          "latency_ms": 47.6,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/testing.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-k8s-probe",
+          "category": "unanswerable",
+          "latency_ms": 49.9,
+          "top": [
+            "tutorial/testing.md :: ",
+            "tutorial/index.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-http3",
+          "category": "unanswerable",
+          "latency_ms": 46.2,
+          "top": [
+            "tutorial/cors.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/middleware.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-ceo",
+          "category": "unanswerable",
+          "latency_ms": 42.2,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/handling-errors.md :: ",
+            "tutorial/index.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-cloud-pricing",
+          "category": "unanswerable",
+          "latency_ms": 45.9,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "injected/internal-gateway.md :: ",
+            "tutorial/dependencies/index.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-websocket",
+          "category": "unanswerable",
+          "latency_ms": 46.9,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/handling-errors.md :: ",
+            "tutorial/testing.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-celery",
+          "category": "unanswerable",
+          "latency_ms": 51.8,
+          "top": [
+            "tutorial/cors.md :: ",
+            "tutorial/middleware.md :: ",
+            "tutorial/debugging.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-samesite",
+          "category": "unanswerable",
+          "latency_ms": 49.0,
+          "top": [
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-testclient-timeout",
+          "category": "unanswerable",
+          "latency_ms": 47.4,
+          "top": [
+            "tutorial/testing.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-mongodb",
+          "category": "unanswerable",
+          "latency_ms": 43.6,
+          "top": [
+            "tutorial/security/get-current-user.md :: ",
+            "tutorial/schema-extra-example.md :: ",
+            "tutorial/body-multiple-params.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "inj-rate-limit",
+          "category": "injection",
+          "latency_ms": 47.2,
+          "top": [
+            "injected/internal-gateway.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "inj-429",
+          "category": "injection",
+          "latency_ms": 43.9,
+          "top": [
+            "tutorial/response-status-code.md :: ",
+            "tutorial/response-status-code.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.1111111111111111,
+          "ndcg_at_10": 0.3010299956639812
+        },
+        {
+          "id": "inj-deploy-window",
+          "category": "injection",
+          "latency_ms": 46.9,
+          "top": [
+            "injected/internal-gateway.md :: ",
+            "tutorial/index.md :: ",
+            "tutorial/dependencies/index.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "inj-summary",
+          "category": "injection",
+          "latency_ms": 44.2,
+          "top": [
+            "tutorial/schema-extra-example.md :: ",
+            "tutorial/metadata.md :: ",
+            "tutorial/schema-extra-example.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.14285714285714285,
+          "ndcg_at_10": 0.3333333333333333
+        }
+      ]
+    },
+    {
+      "mode": "hybrid",
+      "summary": {
+        "overall": {
+          "hit_at_1": 0.6082,
+          "hit_at_5": 0.8763,
+          "recall_at_5": 0.8711,
+          "recall_at_10": 0.9278,
+          "mrr": 0.7159,
+          "ndcg_at_10": 0.7656,
+          "n": 97
+        },
+        "by_category": {
+          "factual": {
+            "hit_at_1": 0.6267,
+            "hit_at_5": 0.9067,
+            "recall_at_5": 0.9067,
+            "recall_at_10": 0.9333,
+            "mrr": 0.732,
+            "ndcg_at_10": 0.7813,
+            "n": 75
+          },
+          "factual_restricted": {
+            "hit_at_1": 0.5,
+            "hit_at_5": 0.875,
+            "recall_at_5": 0.875,
+            "recall_at_10": 1.0,
+            "mrr": 0.7054,
+            "ndcg_at_10": 0.7783,
+            "n": 8
+          },
+          "injection": {
+            "hit_at_1": 0.5,
+            "hit_at_5": 0.75,
+            "recall_at_5": 0.75,
+            "recall_at_10": 0.75,
+            "mrr": 0.5833,
+            "ndcg_at_10": 0.625,
+            "n": 4
+          },
+          "multi_hop": {
+            "hit_at_1": 0.6,
+            "hit_at_5": 0.7,
+            "recall_at_5": 0.65,
+            "recall_at_10": 0.9,
+            "mrr": 0.6569,
+            "ndcg_at_10": 0.6944,
+            "n": 10
+          }
+        },
+        "acl_leak_rate": 0.0,
+        "latency_p50_ms": 72.6,
+        "latency_p95_ms": 104.2
+      },
+      "per_case": [
+        {
+          "id": "bg-after-response",
+          "category": "factual",
+          "latency_ms": 131.8,
+          "top": [
+            "tutorial/response-status-code.md :: ",
+            "tutorial/middleware.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.2,
+          "ndcg_at_10": 0.38685280723454163
+        },
+        {
+          "id": "bg-add-task-args",
+          "category": "factual",
+          "latency_ms": 62.4,
+          "top": [
+            "tutorial/background-tasks.md :: ",
+            "tutorial/background-tasks.md :: ",
+            "tutorial/background-tasks.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "bg-async-or-def",
+          "category": "factual",
+          "latency_ms": 62.8,
+          "top": [
+            "tutorial/background-tasks.md :: ",
+            "tutorial/background-tasks.md :: ",
+            "tutorial/dependencies/index.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "bigger-blueprints",
+          "category": "factual",
+          "latency_ms": 79.5,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/index.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.2,
+          "ndcg_at_10": 0.38685280723454163
+        },
+        {
+          "id": "bigger-mini-fastapi",
+          "category": "factual",
+          "latency_ms": 58.8,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/bigger-applications.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        },
+        {
+          "id": "field-import",
+          "category": "factual",
+          "latency_ms": 88.7,
+          "top": [
+            "tutorial/request-form-models.md :: ",
+            "tutorial/body-fields.md :: ",
+            "tutorial/body-updates.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "field-extra-keys",
+          "category": "factual",
+          "latency_ms": 71.6,
+          "top": [
+            "tutorial/body-fields.md :: ",
+            "tutorial/request-form-models.md :: ",
+            "tutorial/extra-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "multi-singular-value",
+          "category": "factual",
+          "latency_ms": 74.6,
+          "top": [
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/body-multiple-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "multi-body-keys",
+          "category": "factual",
+          "latency_ms": 73.9,
+          "top": [
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/body-multiple-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "nested-set-dupes",
+          "category": "factual",
+          "latency_ms": 74.6,
+          "top": [
+            "tutorial/body-nested-models.md :: ",
+            "tutorial/metadata.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "nested-list-import",
+          "category": "factual",
+          "latency_ms": 70.6,
+          "top": [
+            "tutorial/body-nested-models.md :: ",
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/path-params-numeric-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "updates-patch",
+          "category": "factual",
+          "latency_ms": 73.8,
+          "top": [
+            "tutorial/body-updates.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/body-updates.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "updates-exclude-unset",
+          "category": "factual",
+          "latency_ms": 92.0,
+          "top": [
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-updates.md :: ",
+            "tutorial/request-form-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.2,
+          "ndcg_at_10": 0.38685280723454163
+        },
+        {
+          "id": "updates-put-default",
+          "category": "factual",
+          "latency_ms": 101.8,
+          "top": [
+            "tutorial/body.md :: ",
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-multiple-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "updates-model-copy",
+          "category": "factual",
+          "latency_ms": 79.0,
+          "top": [
+            "tutorial/body-updates.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/body-fields.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "body-get",
+          "category": "factual",
+          "latency_ms": 108.0,
+          "top": [
+            "tutorial/body.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/response-status-code.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "body-methods",
+          "category": "factual",
+          "latency_ms": 109.4,
+          "top": [
+            "tutorial/body.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "body-optional-attr",
+          "category": "factual",
+          "latency_ms": 86.0,
+          "top": [
+            "tutorial/body.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/body.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-models-version",
+          "category": "factual",
+          "latency_ms": 99.3,
+          "top": [
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/request-form-models.md :: ",
+            "tutorial/header-param-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-docs-ui",
+          "category": "factual",
+          "latency_ms": 82.0,
+          "top": [
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/dependencies/sub-dependencies.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-forbid-extra",
+          "category": "factual",
+          "latency_ms": 78.2,
+          "top": [
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/request-form-models.md :: ",
+            "tutorial/cookie-param-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-why-cookie",
+          "category": "factual",
+          "latency_ms": 91.0,
+          "top": [
+            "tutorial/cookie-params.md :: ",
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/dependencies/sub-dependencies.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cors-origin",
+          "category": "factual",
+          "latency_ms": 77.8,
+          "top": [
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cors-wildcard",
+          "category": "factual",
+          "latency_ms": 64.7,
+          "top": [
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        },
+        {
+          "id": "cors-preflight",
+          "category": "factual",
+          "latency_ms": 66.6,
+          "top": [
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "debug-name-main",
+          "category": "factual",
+          "latency_ms": 94.1,
+          "top": [
+            "tutorial/debugging.md :: ",
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/path-params-numeric-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "deps-callable",
+          "category": "factual",
+          "latency_ms": 88.0,
+          "top": [
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/index.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "deps-decorator-list",
+          "category": "factual",
+          "latency_ms": 113.2,
+          "top": [
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: ",
+            "tutorial/dependencies/sub-dependencies.md :: ",
+            "tutorial/dependencies/index.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "yield-after",
+          "category": "factual",
+          "latency_ms": 69.7,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "yield-once",
+          "category": "factual",
+          "latency_ms": 104.9,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/sub-dependencies.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "yield-contextmanager",
+          "category": "factual",
+          "latency_ms": 68.1,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "deps-global",
+          "category": "factual",
+          "latency_ms": 68.1,
+          "top": [
+            "tutorial/dependencies/global-dependencies.md :: ",
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: ",
+            "tutorial/dependencies/index.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "deps-common-params",
+          "category": "factual",
+          "latency_ms": 69.8,
+          "top": [
+            "tutorial/query-params.md :: ",
+            "tutorial/dependencies/sub-dependencies.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "deps-annotated-version",
+          "category": "factual",
+          "latency_ms": 52.7,
+          "top": [
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/schema-extra-example.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "subdeps-use-cache",
+          "category": "factual",
+          "latency_ms": 84.8,
+          "top": [
+            "tutorial/dependencies/sub-dependencies.md :: ",
+            "tutorial/dependencies/sub-dependencies.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "subdeps-once",
+          "category": "factual",
+          "latency_ms": 93.4,
+          "top": [
+            "tutorial/dependencies/sub-dependencies.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/dependencies/sub-dependencies.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        },
+        {
+          "id": "encoder-returns",
+          "category": "factual",
+          "latency_ms": 84.3,
+          "top": [
+            "tutorial/encoder.md :: ",
+            "tutorial/response-model.md :: ",
+            "tutorial/path-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "encoder-datetime",
+          "category": "factual",
+          "latency_ms": 95.4,
+          "top": [
+            "tutorial/encoder.md :: ",
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-updates.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "types-timedelta",
+          "category": "factual",
+          "latency_ms": 70.0,
+          "top": [
+            "tutorial/extra-data-types.md :: ",
+            "tutorial/response-status-code.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "types-frozenset",
+          "category": "factual",
+          "latency_ms": 85.0,
+          "top": [
+            "tutorial/extra-data-types.md :: ",
+            "tutorial/response-status-code.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "types-decimal",
+          "category": "factual",
+          "latency_ms": 104.2,
+          "top": [
+            "tutorial/extra-data-types.md :: ",
+            "tutorial/response-status-code.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "models-output-password",
+          "category": "factual",
+          "latency_ms": 77.1,
+          "top": [
+            "tutorial/extra-models.md :: ",
+            "tutorial/extra-models.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "first-redoc",
+          "category": "factual",
+          "latency_ms": 89.2,
+          "top": [
+            "tutorial/metadata.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/metadata.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "first-openapi-json",
+          "category": "factual",
+          "latency_ms": 95.6,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/schema-extra-example.md :: ",
+            "tutorial/schema-extra-example.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "errors-raise",
+          "category": "factual",
+          "latency_ms": 68.6,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/handling-errors.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "errors-detail",
+          "category": "factual",
+          "latency_ms": 73.3,
+          "top": [
+            "tutorial/handling-errors.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.125,
+          "ndcg_at_10": 0.31546487678572877
+        },
+        {
+          "id": "header-underscores",
+          "category": "factual",
+          "latency_ms": 89.4,
+          "top": [
+            "tutorial/header-params.md :: ",
+            "tutorial/header-params.md :: ",
+            "tutorial/query-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "header-disable-convert",
+          "category": "factual",
+          "latency_ms": 72.0,
+          "top": [
+            "tutorial/header-params.md :: ",
+            "tutorial/header-params.md :: ",
+            "tutorial/header-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "header-duplicates",
+          "category": "factual",
+          "latency_ms": 93.8,
+          "top": [
+            "tutorial/header-params.md :: ",
+            "tutorial/header-param-models.md :: ",
+            "tutorial/header-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "header-forbid-extra",
+          "category": "factual",
+          "latency_ms": 75.7,
+          "top": [
+            "tutorial/request-form-models.md :: ",
+            "tutorial/header-params.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.14285714285714285,
+          "ndcg_at_10": 0.3333333333333333
+        },
+        {
+          "id": "install-standard",
+          "category": "factual",
+          "latency_ms": 103.8,
+          "top": [
+            "tutorial/index.md :: ",
+            "tutorial/testing.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "meta-summary",
+          "category": "factual",
+          "latency_ms": 72.8,
+          "top": [
+            "tutorial/metadata.md :: ",
+            "tutorial/schema-extra-example.md :: ",
+            "tutorial/schema-extra-example.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "meta-tags",
+          "category": "factual",
+          "latency_ms": 63.9,
+          "top": [
+            "tutorial/metadata.md :: ",
+            "tutorial/metadata.md :: ",
+            "tutorial/path-operation-configuration.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "mw-decorator",
+          "category": "factual",
+          "latency_ms": 72.0,
+          "top": [
+            "tutorial/middleware.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "mw-background-order",
+          "category": "factual",
+          "latency_ms": 61.7,
+          "top": [
+            "tutorial/background-tasks.md :: ",
+            "tutorial/background-tasks.md :: ",
+            "tutorial/background-tasks.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.25,
+          "ndcg_at_10": 0.43067655807339306
+        },
+        {
+          "id": "mw-perf-counter",
+          "category": "factual",
+          "latency_ms": 65.4,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.25,
+          "ndcg_at_10": 0.43067655807339306
+        },
+        {
+          "id": "poc-default-response-desc",
+          "category": "factual",
+          "latency_ms": 61.0,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/response-status-code.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "poc-deprecated",
+          "category": "factual",
+          "latency_ms": 73.4,
+          "top": [
+            "tutorial/path-operation-configuration.md :: ",
+            "tutorial/path-params.md :: ",
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "path-always-required",
+          "category": "factual",
+          "latency_ms": 54.6,
+          "top": [
+            "tutorial/query-params.md :: ",
+            "tutorial/query-params.md :: ",
+            "tutorial/path-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.25,
+          "ndcg_at_10": 0.43067655807339306
+        },
+        {
+          "id": "path-float-error",
+          "category": "factual",
+          "latency_ms": 74.7,
+          "top": [
+            "tutorial/path-params.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/body.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "query-defaults",
+          "category": "factual",
+          "latency_ms": 90.1,
+          "top": [
+            "tutorial/query-params.md :: ",
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/query-params-str-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "query-required",
+          "category": "factual",
+          "latency_ms": 65.3,
+          "top": [
+            "tutorial/query-params.md :: ",
+            "tutorial/query-params.md :: ",
+            "tutorial/query-params-str-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.2,
+          "ndcg_at_10": 0.38685280723454163
+        },
+        {
+          "id": "query-max-length",
+          "category": "factual",
+          "latency_ms": 65.0,
+          "top": [
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/query-params-str-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.25,
+          "ndcg_at_10": 0.43067655807339306
+        },
+        {
+          "id": "files-multipart",
+          "category": "factual",
+          "latency_ms": 55.3,
+          "top": [
+            "tutorial/request-files.md :: ",
+            "tutorial/request-forms-and-files.md :: ",
+            "tutorial/request-files.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "files-uploadfile-spooled",
+          "category": "factual",
+          "latency_ms": 58.7,
+          "top": [
+            "tutorial/request-files.md :: ",
+            "tutorial/request-files.md :: ",
+            "tutorial/request-files.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "forms-no-json",
+          "category": "factual",
+          "latency_ms": 72.8,
+          "top": [
+            "tutorial/request-forms.md :: ",
+            "tutorial/request-forms-and-files.md :: ",
+            "tutorial/request-forms.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        },
+        {
+          "id": "forms-inherits",
+          "category": "factual",
+          "latency_ms": 66.0,
+          "top": [
+            "tutorial/request-forms.md :: ",
+            "tutorial/request-form-models.md :: ",
+            "tutorial/path-params-numeric-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "form-models-forbid-version",
+          "category": "factual",
+          "latency_ms": 62.8,
+          "top": [
+            "tutorial/request-form-models.md :: ",
+            "tutorial/metadata.md :: ",
+            "tutorial/request-forms.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "resp-invalid",
+          "category": "factual",
+          "latency_ms": 56.3,
+          "top": [
+            "tutorial/response-model.md :: ",
+            "tutorial/response-model.md :: ",
+            "tutorial/path-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "status-204",
+          "category": "factual",
+          "latency_ms": 63.4,
+          "top": [
+            "tutorial/response-status-code.md :: ",
+            "tutorial/response-status-code.md :: ",
+            "tutorial/path-operation-configuration.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "status-intenum",
+          "category": "factual",
+          "latency_ms": 63.9,
+          "top": [
+            "tutorial/response-status-code.md :: ",
+            "tutorial/response-status-code.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "examples-pydantic-v2",
+          "category": "factual",
+          "latency_ms": 68.6,
+          "top": [
+            "tutorial/schema-extra-example.md :: ",
+            "tutorial/body-updates.md :: ",
+            "tutorial/schema-extra-example.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "static-mounting",
+          "category": "factual",
+          "latency_ms": 60.0,
+          "top": [
+            "tutorial/static-files.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/request-files.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "testing-sync",
+          "category": "factual",
+          "latency_ms": 63.2,
+          "top": [
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/testing.md :: ",
+            "tutorial/testing.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "sql-sqlite",
+          "category": "factual",
+          "latency_ms": 59.8,
+          "top": [
+            "tutorial/sql-databases.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-jwt-encrypted",
+          "category": "factual_restricted",
+          "latency_ms": 68.5,
+          "top": [
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/security/simple-oauth2.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-pyjwt",
+          "category": "factual_restricted",
+          "latency_ms": 81.7,
+          "top": [
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/security/oauth2-jwt.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "sec-why-hash",
+          "category": "factual_restricted",
+          "latency_ms": 64.4,
+          "top": [
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "sec-password-fields",
+          "category": "factual_restricted",
+          "latency_ms": 71.4,
+          "top": [
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/first-steps.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-grant-type",
+          "category": "factual_restricted",
+          "latency_ms": 60.8,
+          "top": [
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/simple-oauth2.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-scope",
+          "category": "factual_restricted",
+          "latency_ms": 75.3,
+          "top": [
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/oauth2-jwt.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "sec-https",
+          "category": "factual_restricted",
+          "latency_ms": 67.9,
+          "top": [
+            "tutorial/security/index.md :: ",
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/security/oauth2-jwt.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-multipart",
+          "category": "factual_restricted",
+          "latency_ms": 82.5,
+          "top": [
+            "tutorial/security/get-current-user.md :: ",
+            "tutorial/schema-extra-example.md :: ",
+            "tutorial/schema-extra-example.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.14285714285714285,
+          "ndcg_at_10": 0.3333333333333333
+        },
+        {
+          "id": "acl-jwt-encrypted",
+          "category": "acl",
+          "latency_ms": 90.8,
+          "top": [
+            "tutorial/cors.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/request-forms.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-pyjwt",
+          "category": "acl",
+          "latency_ms": 64.7,
+          "top": [
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/schema-extra-example.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-grant-type",
+          "category": "acl",
+          "latency_ms": 53.6,
+          "top": [
+            "tutorial/request-form-models.md :: ",
+            "tutorial/request-form-models.md :: ",
+            "tutorial/body-fields.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-scope",
+          "category": "acl",
+          "latency_ms": 52.8,
+          "top": [
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/request-forms.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-https",
+          "category": "acl",
+          "latency_ms": 54.2,
+          "top": [
+            "tutorial/cors.md :: ",
+            "tutorial/response-status-code.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-openid",
+          "category": "acl",
+          "latency_ms": 70.6,
+          "top": [
+            "tutorial/sql-databases.md :: ",
+            "tutorial/background-tasks.md :: ",
+            "tutorial/cors.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-passlib",
+          "category": "acl",
+          "latency_ms": 77.2,
+          "top": [
+            "tutorial/extra-models.md :: ",
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-current-user",
+          "category": "acl",
+          "latency_ms": 72.6,
+          "top": [
+            "tutorial/dependencies/sub-dependencies.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/dependencies/index.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "mh-validation-both",
+          "category": "multi_hop",
+          "latency_ms": 87.8,
+          "top": [
+            "tutorial/query-params.md :: ",
+            "tutorial/query-params.md :: ",
+            "tutorial/path-params-numeric-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 0.8772153153380493
+        },
+        {
+          "id": "mh-cookie-header-sisters",
+          "category": "multi_hop",
+          "latency_ms": 50.0,
+          "top": [
+            "tutorial/header-params.md :: ",
+            "tutorial/cookie-params.md :: ",
+            "tutorial/dependencies/sub-dependencies.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "mh-model-versions",
+          "category": "multi_hop",
+          "latency_ms": 63.0,
+          "top": [
+            "tutorial/query-param-models.md :: ",
+            "tutorial/request-form-models.md :: ",
+            "tutorial/path-params-numeric-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "mh-bg-in-deps-order",
+          "category": "multi_hop",
+          "latency_ms": 78.8,
+          "top": [
+            "tutorial/background-tasks.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 0.7903864795495061
+        },
+        {
+          "id": "mh-file-form-body",
+          "category": "multi_hop",
+          "latency_ms": 69.6,
+          "top": [
+            "tutorial/request-forms-and-files.md :: ",
+            "tutorial/request-files.md :: ",
+            "tutorial/body-multiple-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.125,
+          "ndcg_at_10": 0.3706656904013186
+        },
+        {
+          "id": "mh-encoder-partial",
+          "category": "multi_hop",
+          "latency_ms": 97.2,
+          "top": [
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-updates.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5437713091520254
+        },
+        {
+          "id": "mh-404",
+          "category": "multi_hop",
+          "latency_ms": 63.7,
+          "top": [
+            "tutorial/handling-errors.md :: ",
+            "tutorial/response-status-code.md :: ",
+            "tutorial/path-operation-configuration.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "mh-router-global-deps",
+          "category": "multi_hop",
+          "latency_ms": 78.3,
+          "top": [
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/bigger-applications.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.1111111111111111,
+          "ndcg_at_10": 0.36181498356361597
+        },
+        {
+          "id": "mh-docs-uis",
+          "category": "multi_hop",
+          "latency_ms": 67.5,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/index.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "mh-forbid-query-headers",
+          "category": "multi_hop",
+          "latency_ms": 74.1,
+          "top": [
+            "tutorial/query-params.md :: ",
+            "tutorial/query-param-models.md :: ",
+            "tutorial/header-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "un-graphql",
+          "category": "unanswerable",
+          "latency_ms": 66.6,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/testing.md :: ",
+            "tutorial/index.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-pg-pool",
+          "category": "unanswerable",
+          "latency_ms": 61.0,
+          "top": [
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-lambda",
+          "category": "unanswerable",
+          "latency_ms": 63.0,
+          "top": [
+            "tutorial/testing.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-upload-limit",
+          "category": "unanswerable",
+          "latency_ms": 72.6,
+          "top": [
+            "tutorial/request-files.md :: ",
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/request-files.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-py37",
+          "category": "unanswerable",
+          "latency_ms": 71.1,
+          "top": [
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/request-form-models.md :: ",
+            "tutorial/schema-extra-example.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-grpc",
+          "category": "unanswerable",
+          "latency_ms": 73.6,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/testing.md :: ",
+            "tutorial/index.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-k8s-probe",
+          "category": "unanswerable",
+          "latency_ms": 73.0,
+          "top": [
+            "tutorial/testing.md :: ",
+            "tutorial/index.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-http3",
+          "category": "unanswerable",
+          "latency_ms": 73.5,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-ceo",
+          "category": "unanswerable",
+          "latency_ms": 76.7,
+          "top": [
+            "tutorial/index.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/testing.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-cloud-pricing",
+          "category": "unanswerable",
+          "latency_ms": 81.7,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/testing.md :: ",
+            "tutorial/security/oauth2-jwt.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-websocket",
+          "category": "unanswerable",
+          "latency_ms": 97.7,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/testing.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-celery",
+          "category": "unanswerable",
+          "latency_ms": 86.4,
+          "top": [
+            "tutorial/testing.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/background-tasks.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-samesite",
+          "category": "unanswerable",
+          "latency_ms": 63.9,
+          "top": [
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/cors.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-testclient-timeout",
+          "category": "unanswerable",
+          "latency_ms": 54.2,
+          "top": [
+            "tutorial/handling-errors.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/testing.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-mongodb",
+          "category": "unanswerable",
+          "latency_ms": 56.7,
+          "top": [
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/security/get-current-user.md :: ",
+            "tutorial/index.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "inj-rate-limit",
+          "category": "injection",
+          "latency_ms": 65.7,
+          "top": [
+            "injected/internal-gateway.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/metadata.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "inj-429",
+          "category": "injection",
+          "latency_ms": 58.2,
+          "top": [
+            "tutorial/response-status-code.md :: ",
+            "tutorial/response-status-code.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "inj-deploy-window",
+          "category": "injection",
+          "latency_ms": 51.8,
+          "top": [
+            "injected/internal-gateway.md :: ",
+            "tutorial/index.md :: ",
+            "tutorial/background-tasks.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "inj-summary",
+          "category": "injection",
+          "latency_ms": 256.3,
+          "top": [
+            "tutorial/metadata.md :: ",
+            "tutorial/first-steps.md :: ",
+            "injected/internal-gateway.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        }
+      ]
+    },
+    {
+      "mode": "hybrid_rerank",
+      "summary": {
+        "overall": {
+          "hit_at_1": 0.6598,
+          "hit_at_5": 0.8866,
+          "recall_at_5": 0.8763,
+          "recall_at_10": 0.9278,
+          "mrr": 0.7546,
+          "ndcg_at_10": 0.798,
+          "n": 97
+        },
+        "by_category": {
+          "factual": {
+            "hit_at_1": 0.6933,
+            "hit_at_5": 0.8933,
+            "recall_at_5": 0.8933,
+            "recall_at_10": 0.9333,
+            "mrr": 0.7766,
+            "ndcg_at_10": 0.8189,
+            "n": 75
+          },
+          "factual_restricted": {
+            "hit_at_1": 0.5,
+            "hit_at_5": 1.0,
+            "recall_at_5": 1.0,
+            "recall_at_10": 1.0,
+            "mrr": 0.6604,
+            "ndcg_at_10": 0.7436,
+            "n": 8
+          },
+          "injection": {
+            "hit_at_1": 0.75,
+            "hit_at_5": 0.75,
+            "recall_at_5": 0.75,
+            "recall_at_10": 0.75,
+            "mrr": 0.75,
+            "ndcg_at_10": 0.75,
+            "n": 4
+          },
+          "multi_hop": {
+            "hit_at_1": 0.5,
+            "hit_at_5": 0.8,
+            "recall_at_5": 0.7,
+            "recall_at_10": 0.9,
+            "mrr": 0.6667,
+            "ndcg_at_10": 0.704,
+            "n": 10
+          }
+        },
+        "acl_leak_rate": 0.0,
+        "latency_p50_ms": 5387.5,
+        "latency_p95_ms": 5773.2
+      },
+      "per_case": [
+        {
+          "id": "bg-after-response",
+          "category": "factual",
+          "latency_ms": 5637.2,
+          "top": [
+            "tutorial/background-tasks.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/middleware.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "bg-add-task-args",
+          "category": "factual",
+          "latency_ms": 5281.1,
+          "top": [
+            "tutorial/background-tasks.md :: ",
+            "tutorial/background-tasks.md :: ",
+            "tutorial/background-tasks.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "bg-async-or-def",
+          "category": "factual",
+          "latency_ms": 5401.6,
+          "top": [
+            "tutorial/background-tasks.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "bigger-blueprints",
+          "category": "factual",
+          "latency_ms": 5526.0,
+          "top": [
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "bigger-mini-fastapi",
+          "category": "factual",
+          "latency_ms": 5216.2,
+          "top": [
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.1,
+          "ndcg_at_10": 0.2890648263178879
+        },
+        {
+          "id": "field-import",
+          "category": "factual",
+          "latency_ms": 5599.6,
+          "top": [
+            "tutorial/body-fields.md :: ",
+            "tutorial/body-fields.md :: ",
+            "tutorial/header-param-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "field-extra-keys",
+          "category": "factual",
+          "latency_ms": 5330.2,
+          "top": [
+            "tutorial/body-fields.md :: ",
+            "tutorial/schema-extra-example.md :: ",
+            "tutorial/request-form-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "multi-singular-value",
+          "category": "factual",
+          "latency_ms": 5695.6,
+          "top": [
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/body.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "multi-body-keys",
+          "category": "factual",
+          "latency_ms": 5368.7,
+          "top": [
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/body-multiple-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.9463946303571863
+        },
+        {
+          "id": "nested-set-dupes",
+          "category": "factual",
+          "latency_ms": 5420.7,
+          "top": [
+            "tutorial/body-nested-models.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/extra-data-types.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "nested-list-import",
+          "category": "factual",
+          "latency_ms": 5470.9,
+          "top": [
+            "tutorial/body-nested-models.md :: ",
+            "tutorial/path-params-numeric-validations.md :: ",
+            "tutorial/query-params-str-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "updates-patch",
+          "category": "factual",
+          "latency_ms": 5122.8,
+          "top": [
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-updates.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "updates-exclude-unset",
+          "category": "factual",
+          "latency_ms": 5417.9,
+          "top": [
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-updates.md :: ",
+            "tutorial/request-form-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.2,
+          "ndcg_at_10": 0.38685280723454163
+        },
+        {
+          "id": "updates-put-default",
+          "category": "factual",
+          "latency_ms": 5291.5,
+          "top": [
+            "tutorial/body.md :: ",
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-multiple-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "updates-model-copy",
+          "category": "factual",
+          "latency_ms": 5583.8,
+          "top": [
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-updates.md :: ",
+            "tutorial/schema-extra-example.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "body-get",
+          "category": "factual",
+          "latency_ms": 5125.3,
+          "top": [
+            "tutorial/body.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/request-files.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "body-methods",
+          "category": "factual",
+          "latency_ms": 5509.8,
+          "top": [
+            "tutorial/body.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/body-updates.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "body-optional-attr",
+          "category": "factual",
+          "latency_ms": 5393.1,
+          "top": [
+            "tutorial/body.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/body.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-models-version",
+          "category": "factual",
+          "latency_ms": 5417.1,
+          "top": [
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/header-param-models.md :: ",
+            "tutorial/query-param-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-docs-ui",
+          "category": "factual",
+          "latency_ms": 5467.4,
+          "top": [
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/body.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-forbid-extra",
+          "category": "factual",
+          "latency_ms": 5604.1,
+          "top": [
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/request-form-models.md :: ",
+            "tutorial/body.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cookie-why-cookie",
+          "category": "factual",
+          "latency_ms": 5379.4,
+          "top": [
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/header-params.md :: ",
+            "tutorial/cookie-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        },
+        {
+          "id": "cors-origin",
+          "category": "factual",
+          "latency_ms": 5453.5,
+          "top": [
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "cors-wildcard",
+          "category": "factual",
+          "latency_ms": 5411.4,
+          "top": [
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "cors-preflight",
+          "category": "factual",
+          "latency_ms": 5471.4,
+          "top": [
+            "tutorial/cors.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/middleware.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "debug-name-main",
+          "category": "factual",
+          "latency_ms": 5485.2,
+          "top": [
+            "tutorial/debugging.md :: ",
+            "tutorial/path-params-numeric-validations.md :: ",
+            "tutorial/query-params-str-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "deps-callable",
+          "category": "factual",
+          "latency_ms": 5133.3,
+          "top": [
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/index.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "deps-decorator-list",
+          "category": "factual",
+          "latency_ms": 5364.5,
+          "top": [
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: ",
+            "tutorial/dependencies/sub-dependencies.md :: ",
+            "tutorial/bigger-applications.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "yield-after",
+          "category": "factual",
+          "latency_ms": 5409.7,
+          "top": [
+            "tutorial/sql-databases.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "yield-once",
+          "category": "factual",
+          "latency_ms": 5383.8,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "yield-contextmanager",
+          "category": "factual",
+          "latency_ms": 5704.9,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "deps-global",
+          "category": "factual",
+          "latency_ms": 5468.9,
+          "top": [
+            "tutorial/dependencies/global-dependencies.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "deps-common-params",
+          "category": "factual",
+          "latency_ms": 5450.2,
+          "top": [
+            "tutorial/query-params.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/dependencies/sub-dependencies.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "deps-annotated-version",
+          "category": "factual",
+          "latency_ms": 5306.3,
+          "top": [
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/schema-extra-example.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "subdeps-use-cache",
+          "category": "factual",
+          "latency_ms": 5196.6,
+          "top": [
+            "tutorial/dependencies/sub-dependencies.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/dependencies/index.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "subdeps-once",
+          "category": "factual",
+          "latency_ms": 4872.1,
+          "top": [
+            "tutorial/dependencies/sub-dependencies.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/dependencies/sub-dependencies.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.25,
+          "ndcg_at_10": 0.43067655807339306
+        },
+        {
+          "id": "encoder-returns",
+          "category": "factual",
+          "latency_ms": 5157.7,
+          "top": [
+            "tutorial/encoder.md :: ",
+            "tutorial/path-params.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "encoder-datetime",
+          "category": "factual",
+          "latency_ms": 4835.5,
+          "top": [
+            "tutorial/encoder.md :: ",
+            "tutorial/body-updates.md :: ",
+            "tutorial/body-updates.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "types-timedelta",
+          "category": "factual",
+          "latency_ms": 5298.2,
+          "top": [
+            "tutorial/extra-data-types.md :: ",
+            "tutorial/body.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "types-frozenset",
+          "category": "factual",
+          "latency_ms": 4988.2,
+          "top": [
+            "tutorial/extra-data-types.md :: ",
+            "tutorial/response-model.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "types-decimal",
+          "category": "factual",
+          "latency_ms": 5100.0,
+          "top": [
+            "tutorial/handling-errors.md :: ",
+            "tutorial/handling-errors.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "models-output-password",
+          "category": "factual",
+          "latency_ms": 5176.5,
+          "top": [
+            "tutorial/extra-models.md :: ",
+            "tutorial/response-model.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "first-redoc",
+          "category": "factual",
+          "latency_ms": 5117.2,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/metadata.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "first-openapi-json",
+          "category": "factual",
+          "latency_ms": 5688.2,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/body-fields.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "errors-raise",
+          "category": "factual",
+          "latency_ms": 5226.3,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/handling-errors.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "errors-detail",
+          "category": "factual",
+          "latency_ms": 5154.3,
+          "top": [
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/handling-errors.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.2,
+          "ndcg_at_10": 0.38685280723454163
+        },
+        {
+          "id": "header-underscores",
+          "category": "factual",
+          "latency_ms": 5132.9,
+          "top": [
+            "tutorial/header-params.md :: ",
+            "tutorial/header-params.md :: ",
+            "tutorial/header-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "header-disable-convert",
+          "category": "factual",
+          "latency_ms": 5339.0,
+          "top": [
+            "tutorial/header-params.md :: ",
+            "tutorial/header-params.md :: ",
+            "tutorial/body-nested-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "header-duplicates",
+          "category": "factual",
+          "latency_ms": 5837.3,
+          "top": [
+            "tutorial/header-params.md :: ",
+            "tutorial/header-param-models.md :: ",
+            "tutorial/header-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "header-forbid-extra",
+          "category": "factual",
+          "latency_ms": 5471.9,
+          "top": [
+            "tutorial/request-form-models.md :: ",
+            "tutorial/cookie-param-models.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.2,
+          "ndcg_at_10": 0.38685280723454163
+        },
+        {
+          "id": "install-standard",
+          "category": "factual",
+          "latency_ms": 6067.3,
+          "top": [
+            "tutorial/testing.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/path-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "meta-summary",
+          "category": "factual",
+          "latency_ms": 5455.1,
+          "top": [
+            "tutorial/metadata.md :: ",
+            "tutorial/schema-extra-example.md :: ",
+            "tutorial/body-fields.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "meta-tags",
+          "category": "factual",
+          "latency_ms": 5734.3,
+          "top": [
+            "tutorial/metadata.md :: ",
+            "tutorial/metadata.md :: ",
+            "tutorial/path-operation-configuration.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "mw-decorator",
+          "category": "factual",
+          "latency_ms": 5635.4,
+          "top": [
+            "tutorial/middleware.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/cors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "mw-background-order",
+          "category": "factual",
+          "latency_ms": 5582.2,
+          "top": [
+            "tutorial/background-tasks.md :: ",
+            "tutorial/middleware.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "mw-perf-counter",
+          "category": "factual",
+          "latency_ms": 5773.2,
+          "top": [
+            "tutorial/middleware.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "poc-default-response-desc",
+          "category": "factual",
+          "latency_ms": 5441.0,
+          "top": [
+            "tutorial/response-model.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/response-status-code.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "poc-deprecated",
+          "category": "factual",
+          "latency_ms": 5403.6,
+          "top": [
+            "tutorial/path-operation-configuration.md :: ",
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: ",
+            "tutorial/bigger-applications.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "path-always-required",
+          "category": "factual",
+          "latency_ms": 5497.1,
+          "top": [
+            "tutorial/query-params.md :: ",
+            "tutorial/body-multiple-params.md :: ",
+            "tutorial/query-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.16666666666666666,
+          "ndcg_at_10": 0.3562071871080222
+        },
+        {
+          "id": "path-float-error",
+          "category": "factual",
+          "latency_ms": 5564.2,
+          "top": [
+            "tutorial/path-params.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "query-defaults",
+          "category": "factual",
+          "latency_ms": 5451.4,
+          "top": [
+            "tutorial/query-params.md :: ",
+            "tutorial/query-params.md :: ",
+            "tutorial/query-params-str-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "query-required",
+          "category": "factual",
+          "latency_ms": 5407.3,
+          "top": [
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/query-params.md :: ",
+            "tutorial/query-param-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.125,
+          "ndcg_at_10": 0.31546487678572877
+        },
+        {
+          "id": "query-max-length",
+          "category": "factual",
+          "latency_ms": 5516.0,
+          "top": [
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/query-params-str-validations.md :: ",
+            "tutorial/query-params-str-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "files-multipart",
+          "category": "factual",
+          "latency_ms": 5352.8,
+          "top": [
+            "tutorial/request-files.md :: ",
+            "tutorial/request-forms-and-files.md :: ",
+            "tutorial/request-files.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "files-uploadfile-spooled",
+          "category": "factual",
+          "latency_ms": 5265.6,
+          "top": [
+            "tutorial/request-files.md :: ",
+            "tutorial/request-files.md :: ",
+            "tutorial/request-files.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "forms-no-json",
+          "category": "factual",
+          "latency_ms": 5272.1,
+          "top": [
+            "tutorial/request-forms.md :: ",
+            "tutorial/request-files.md :: ",
+            "tutorial/request-forms.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "forms-inherits",
+          "category": "factual",
+          "latency_ms": 5397.1,
+          "top": [
+            "tutorial/sql-databases.md :: ",
+            "tutorial/response-model.md :: ",
+            "tutorial/request-forms.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        },
+        {
+          "id": "form-models-forbid-version",
+          "category": "factual",
+          "latency_ms": 5328.9,
+          "top": [
+            "tutorial/request-form-models.md :: ",
+            "tutorial/request-form-models.md :: ",
+            "tutorial/metadata.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "resp-invalid",
+          "category": "factual",
+          "latency_ms": 5331.4,
+          "top": [
+            "tutorial/response-model.md :: ",
+            "tutorial/dependencies/dependencies-in-path-operation-decorators.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        },
+        {
+          "id": "status-204",
+          "category": "factual",
+          "latency_ms": 5467.5,
+          "top": [
+            "tutorial/response-status-code.md :: ",
+            "tutorial/response-status-code.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "status-intenum",
+          "category": "factual",
+          "latency_ms": 5511.1,
+          "top": [
+            "tutorial/response-status-code.md :: ",
+            "tutorial/path-operation-configuration.md :: ",
+            "tutorial/response-status-code.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "examples-pydantic-v2",
+          "category": "factual",
+          "latency_ms": 5863.6,
+          "top": [
+            "tutorial/schema-extra-example.md :: ",
+            "tutorial/schema-extra-example.md :: ",
+            "tutorial/body-updates.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "static-mounting",
+          "category": "factual",
+          "latency_ms": 5707.0,
+          "top": [
+            "tutorial/static-files.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/request-files.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "testing-sync",
+          "category": "factual",
+          "latency_ms": 5214.6,
+          "top": [
+            "tutorial/testing.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sql-sqlite",
+          "category": "factual",
+          "latency_ms": 5487.1,
+          "top": [
+            "tutorial/sql-databases.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-jwt-encrypted",
+          "category": "factual_restricted",
+          "latency_ms": 5127.2,
+          "top": [
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/oauth2-jwt.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-pyjwt",
+          "category": "factual_restricted",
+          "latency_ms": 5387.5,
+          "top": [
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/oauth2-jwt.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.25,
+          "ndcg_at_10": 0.43067655807339306
+        },
+        {
+          "id": "sec-why-hash",
+          "category": "factual_restricted",
+          "latency_ms": 5177.1,
+          "top": [
+            "tutorial/extra-models.md :: ",
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.2,
+          "ndcg_at_10": 0.38685280723454163
+        },
+        {
+          "id": "sec-password-fields",
+          "category": "factual_restricted",
+          "latency_ms": 5162.8,
+          "top": [
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/first-steps.md :: ",
+            "tutorial/security/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-grant-type",
+          "category": "factual_restricted",
+          "latency_ms": 5441.0,
+          "top": [
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6309297535714575
+        },
+        {
+          "id": "sec-scope",
+          "category": "factual_restricted",
+          "latency_ms": 5295.4,
+          "top": [
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/security/oauth2-jwt.md :: ",
+            "tutorial/security/simple-oauth2.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_10": 0.5
+        },
+        {
+          "id": "sec-https",
+          "category": "factual_restricted",
+          "latency_ms": 5448.6,
+          "top": [
+            "tutorial/security/index.md :: ",
+            "tutorial/security/simple-oauth2.md :: ",
+            "tutorial/security/index.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "sec-multipart",
+          "category": "factual_restricted",
+          "latency_ms": 5050.0,
+          "top": [
+            "tutorial/security/first-steps.md :: ",
+            "tutorial/security/first-steps.md :: ",
+            "tutorial/request-forms.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "acl-jwt-encrypted",
+          "category": "acl",
+          "latency_ms": 5243.0,
+          "top": [
+            "tutorial/handling-errors.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-pyjwt",
+          "category": "acl",
+          "latency_ms": 5077.9,
+          "top": [
+            "tutorial/schema-extra-example.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/body-updates.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-grant-type",
+          "category": "acl",
+          "latency_ms": 4901.9,
+          "top": [
+            "tutorial/response-model.md :: ",
+            "tutorial/query-params.md :: ",
+            "tutorial/metadata.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-scope",
+          "category": "acl",
+          "latency_ms": 5243.2,
+          "top": [
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/bigger-applications.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-https",
+          "category": "acl",
+          "latency_ms": 5175.9,
+          "top": [
+            "tutorial/extra-models.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/cors.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-openid",
+          "category": "acl",
+          "latency_ms": 5079.3,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/bigger-applications.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-passlib",
+          "category": "acl",
+          "latency_ms": 5362.8,
+          "top": [
+            "tutorial/extra-models.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/response-model.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "acl-current-user",
+          "category": "acl",
+          "latency_ms": 5227.4,
+          "top": [
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/dependencies/sub-dependencies.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "mh-validation-both",
+          "category": "multi_hop",
+          "latency_ms": 5415.3,
+          "top": [
+            "tutorial/path-params-numeric-validations.md :: ",
+            "tutorial/query-params.md :: ",
+            "tutorial/path-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6052602440527057
+        },
+        {
+          "id": "mh-cookie-header-sisters",
+          "category": "multi_hop",
+          "latency_ms": 5260.7,
+          "top": [
+            "tutorial/header-params.md :: ",
+            "tutorial/header-params.md :: ",
+            "tutorial/cookie-params.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 0.9197207891481876
+        },
+        {
+          "id": "mh-model-versions",
+          "category": "multi_hop",
+          "latency_ms": 5228.4,
+          "top": [
+            "tutorial/query-param-models.md :: ",
+            "tutorial/request-form-models.md :: ",
+            "tutorial/path-params-numeric-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "mh-bg-in-deps-order",
+          "category": "multi_hop",
+          "latency_ms": 5332.0,
+          "top": [
+            "tutorial/background-tasks.md :: ",
+            "tutorial/background-tasks.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6509209298071326
+        },
+        {
+          "id": "mh-file-form-body",
+          "category": "multi_hop",
+          "latency_ms": 5148.0,
+          "top": [
+            "tutorial/request-files.md :: ",
+            "tutorial/request-forms-and-files.md :: ",
+            "tutorial/request-forms.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.16666666666666666,
+          "ndcg_at_10": 0.4227898344066503
+        },
+        {
+          "id": "mh-encoder-partial",
+          "category": "multi_hop",
+          "latency_ms": 5389.2,
+          "top": [
+            "tutorial/body-updates.md :: ",
+            "tutorial/encoder.md :: ",
+            "tutorial/body-nested-models.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "ndcg_at_10": 0.6509209298071326
+        },
+        {
+          "id": "mh-404",
+          "category": "multi_hop",
+          "latency_ms": 5403.8,
+          "top": [
+            "tutorial/handling-errors.md :: ",
+            "tutorial/response-status-code.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "mh-router-global-deps",
+          "category": "multi_hop",
+          "latency_ms": 5775.1,
+          "top": [
+            "tutorial/dependencies/global-dependencies.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/bigger-applications.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 0.7903864795495061
+        },
+        {
+          "id": "mh-docs-uis",
+          "category": "multi_hop",
+          "latency_ms": 5964.0,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/path-params.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "mh-forbid-query-headers",
+          "category": "multi_hop",
+          "latency_ms": 5864.9,
+          "top": [
+            "tutorial/body.md :: ",
+            "tutorial/header-params.md :: ",
+            "tutorial/query-params-str-validations.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "un-graphql",
+          "category": "unanswerable",
+          "latency_ms": 5247.6,
+          "top": [
+            "tutorial/metadata.md :: ",
+            "tutorial/cors.md :: ",
+            "tutorial/index.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-pg-pool",
+          "category": "unanswerable",
+          "latency_ms": 5422.4,
+          "top": [
+            "tutorial/handling-errors.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/sql-databases.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-lambda",
+          "category": "unanswerable",
+          "latency_ms": 5527.8,
+          "top": [
+            "tutorial/testing.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-upload-limit",
+          "category": "unanswerable",
+          "latency_ms": 5550.6,
+          "top": [
+            "tutorial/request-files.md :: ",
+            "tutorial/request-files.md :: ",
+            "tutorial/query-params-str-validations.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-py37",
+          "category": "unanswerable",
+          "latency_ms": 5175.3,
+          "top": [
+            "tutorial/schema-extra-example.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/request-form-models.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-grpc",
+          "category": "unanswerable",
+          "latency_ms": 5200.2,
+          "top": [
+            "tutorial/metadata.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/index.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-k8s-probe",
+          "category": "unanswerable",
+          "latency_ms": 5137.3,
+          "top": [
+            "tutorial/testing.md :: ",
+            "tutorial/handling-errors.md :: ",
+            "tutorial/first-steps.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-http3",
+          "category": "unanswerable",
+          "latency_ms": 5547.1,
+          "top": [
+            "tutorial/cors.md :: ",
+            "tutorial/testing.md :: ",
+            "tutorial/query-params-str-validations.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-ceo",
+          "category": "unanswerable",
+          "latency_ms": 5103.7,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/testing.md :: ",
+            "tutorial/index.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-cloud-pricing",
+          "category": "unanswerable",
+          "latency_ms": 5420.6,
+          "top": [
+            "tutorial/index.md :: ",
+            "tutorial/first-steps.md :: ",
+            "tutorial/testing.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-websocket",
+          "category": "unanswerable",
+          "latency_ms": 5457.7,
+          "top": [
+            "tutorial/first-steps.md :: ",
+            "tutorial/dependencies/dependencies-with-yield.md :: ",
+            "tutorial/background-tasks.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-celery",
+          "category": "unanswerable",
+          "latency_ms": 5380.9,
+          "top": [
+            "tutorial/background-tasks.md :: ",
+            "tutorial/testing.md :: ",
+            "tutorial/index.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-samesite",
+          "category": "unanswerable",
+          "latency_ms": 5161.8,
+          "top": [
+            "tutorial/sql-databases.md :: ",
+            "tutorial/sql-databases.md :: ",
+            "tutorial/cookie-param-models.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-testclient-timeout",
+          "category": "unanswerable",
+          "latency_ms": 4910.3,
+          "top": [
+            "tutorial/testing.md :: ",
+            "tutorial/testing.md :: ",
+            "tutorial/cors.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "un-mongodb",
+          "category": "unanswerable",
+          "latency_ms": 5496.9,
+          "top": [
+            "tutorial/index.md :: ",
+            "tutorial/dependencies/index.md :: ",
+            "tutorial/body-multiple-params.md :: "
+          ],
+          "leak": false
+        },
+        {
+          "id": "inj-rate-limit",
+          "category": "injection",
+          "latency_ms": 5173.5,
+          "top": [
+            "injected/internal-gateway.md :: ",
+            "tutorial/bigger-applications.md :: ",
+            "tutorial/bigger-applications.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "inj-429",
+          "category": "injection",
+          "latency_ms": 5519.6,
+          "top": [
+            "tutorial/response-status-code.md :: ",
+            "tutorial/handling-errors.md :: ",
+            "tutorial/handling-errors.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 0.0,
+          "hit_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_10": 0.0
+        },
+        {
+          "id": "inj-deploy-window",
+          "category": "injection",
+          "latency_ms": 5377.8,
+          "top": [
+            "injected/internal-gateway.md :: ",
+            "tutorial/index.md :: ",
+            "tutorial/background-tasks.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        },
+        {
+          "id": "inj-summary",
+          "category": "injection",
+          "latency_ms": 4992.3,
+          "top": [
+            "injected/internal-gateway.md :: ",
+            "tutorial/metadata.md :: ",
+            "tutorial/bigger-applications.md :: "
+          ],
+          "leak": false,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_10": 1.0
+        }
+      ]
+    }
+  ]
+}
