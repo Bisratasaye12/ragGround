@@ -1,0 +1,77 @@
+name: Retrieval eval gate
+
+# Runs the 120-case golden set against a fresh ingest of the eval corpus and fails the build if
+# quality regresses vs evals/baseline.json or any ACL leak appears. Retrieval needs no LLM, so
+# this runs on stock runners without API keys. The reranker mode is slower on 2-core runners,
+# so PRs gate on `hybrid` and the nightly/manual run adds `hybrid_rerank`.
+
+on:
+  pull_request:
+    paths: ["api/**", "evals/**", ".github/workflows/evals.yml"]
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  retrieval-eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    services:
+      postgres:
+        image: pgvector/pgvector:0.8.3-pg18
+        env:
+          POSTGRES_USER: ragground
+          POSTGRES_PASSWORD: ragground
+          POSTGRES_DB: ragground
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U ragground" --health-interval 5s --health-retries 10
+    env:
+      RAGGROUND_DATABASE_URL: postgresql+asyncpg://ragground:ragground@localhost:5432/ragground
+      RAGGROUND_STORAGE_DIR: ${{ runner.temp }}/blobs
+      FASTEMBED_CACHE_PATH: ${{ runner.temp }}/fastembed
+    defaults:
+      run:
+        working-directory: api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - name: Cache models and corpus
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ runner.temp }}/fastembed
+            ~/.cache/huggingface
+            evals/corpus/fastapi
+          key: eval-assets-${{ hashFiles('evals/corpus/fetch_fastapi_docs.py', 'api/uv.lock') }}
+      - run: uv sync --frozen
+      - name: Fetch corpus (pinned FastAPI docs)
+        working-directory: .
+        run: test -f evals/corpus/fastapi/MANIFEST.json || python evals/corpus/fetch_fastapi_docs.py
+      - run: uv run ragground-eval validate
+      - run: uv run alembic upgrade head
+      - name: Retrieval eval
+        run: |
+          MODES=hybrid
+          if [ "${{ github.event_name }}" != "pull_request" ]; then MODES=hybrid,hybrid_rerank; fi
+          uv run ragground-eval retrieval --modes "$MODES" --out ci-retrieval
+      - name: Gate against baseline
+        run: uv run ragground-eval compare ../evals/baseline.json ../evals/reports/ci-retrieval.json
+      - name: Comment results on the PR
+        if: always() && github.event_name == 'pull_request'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: retrieval-eval
+          path: evals/reports/ci-retrieval.md
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: retrieval-eval-report
+          path: evals/reports/ci-retrieval.*
